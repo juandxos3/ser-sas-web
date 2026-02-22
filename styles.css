@@ -1,0 +1,3434 @@
+/* =====================
+   RESET GENERAL
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #f6f9fc;
+  color: #1f2937;
+  line-height: 1.6;
+  padding-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   WHATSAPP FLOTANTE
+===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #ffffff; /* Verde oficial WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647 !important; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #25d366;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.whatsapp-float img {
+  width: 80px;
+  height: 80px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* =====================
+   HEADER / NAV
+===================== */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  overflow: visible !important;
+  }
+
+
+
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 110px;
+}
+
+/* NAV LINKS */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  font-weight: 600;
+  padding: 6px 0;
+  color: #1f2937;
+}
+
+/* LÍNEA VERDE */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #22c55e;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  min-width: 230px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.dropdown a {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.dropdown a:hover {
+  background: #ecfdf5;
+}
+
+nav ul li:hover .dropdown {
+  display: flex;
+}
+
+/* =====================
+   RESET GENERAL
+===================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #f6f9fc;
+  color: #1f2937;
+  line-height: 1.6;
+  padding-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   WHATSAPP FLOTANTE
+===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #ffffff; /* Verde oficial WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647 !important; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #25d366;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.whatsapp-float img {
+  width: 80px;
+  height: 80px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* =====================
+   HEADER / NAV
+===================== */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  overflow: visible !important;
+  }
+
+
+
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 110px;
+}
+
+/* NAV LINKS */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  font-weight: 600;
+  padding: 6px 0;
+  color: #1f2937;
+}
+
+/* LÍNEA VERDE */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #22c55e;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  min-width: 230px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.dropdown a {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.dropdown a:hover {
+  background: #ecfdf5;
+}
+
+nav ul li:hover .dropdown {
+  display: flex;
+}
+
+/* =========================================
+   ESTILO CELULAR DINÁMICO (PREMIUM)
+   ========================================= */
+@media (max-width: 768px) {
+  /* 1. Ajuste del contenedor principal del menú */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column !important; /* Fuerza la columna para los links */
+    align-items: center; 
+    padding: 15px 0 !important;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    display: none;
+    margin-top: 10px;
+    border: 1px solid rgba(34, 197, 94, 0.1);
+    
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* 2. Los links de texto: ocupan el ancho pero centrados */
+  .nav-menu li {
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+  }
+
+  .nav-menu li a {
+    padding: 15px !important;
+    display: block;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+  }
+
+  /* 3. ¡EL FIX PARA REDES SOCIALES! */
+  /* Buscamos el contenedor de los iconos para que NO sea una columna */
+  .nav-socials {
+    display: flex !important;
+    flex-direction: row !important; /* Obligamos a que sean filas, no columnas */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px;
+    padding: 20px 0 10px 0;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin: 0 !important;
+  }
+
+  /* Evitamos que el enlace de la red social se estire */
+  .nav-socials a {
+    width: 42px !important; /* Tamaño fijo para que no se estire */
+    height: 42px !important;
+    flex: none !important; /* Evita que el flexbox lo deforme */
+    background: #f0fdf4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icon-svg {
+    width: 22px !important;
+    height: 22px !important;
+    fill: #22c55e;
+  }
+@media (max-width: 768px) {
+  header {
+    /* Forzamos el blanco puro para que coincida con el fondo de tu imagen */
+    background: #ffffff !important; 
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-container {
+    background: #ffffff !important;
+  }
+
+  .logo {
+    height: 80px !important;
+    /* Esto ayuda a suavizar si hay bordes extraños */
+    mix-blend-mode: multiply; 
+    display: block;
+  }
+}
+
+  /* El Menú desplegable con diseño de tarjeta */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0 40px 0 !important;
+    border-radius: 0 0 40px 40px; 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    display: none; 
+    border-top: 1px solid rgba(34, 197, 94, 0.1);
+  }
+
+  /* Animación de entrada suave */
+  .nav-menu.active {
+    display: flex;
+    animation: slideDownMenu 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  /* EFECTO DINÁMICO: Los items aparecen uno por uno */
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .nav-menu.active li {
+    animation: fadeInUp 0.4s ease forwards;
+  }
+
+  /* Retrasos para el efecto cascada */
+  .nav-menu.active li:nth-child(1) { animation-delay: 0.1s; }
+  .nav-menu.active li:nth-child(2) { animation-delay: 0.2s; }
+  .nav-menu.active li:nth-child(3) { animation-delay: 0.3s; }
+  .nav-menu.active li:nth-child(4) { animation-delay: 0.4s; }
+  .nav-menu.active li:nth-child(5) { animation-delay: 0.5s; }
+
+  .nav-menu li a {
+    padding: 22px;
+    display: block;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  /* Feedback al tocar: El texto se pone verde y crece un poquito */
+  .nav-menu li a:active {
+    background: rgba(34, 197, 94, 0.05);
+    color: #22c55e !important;
+    padding-left: 30px;
+  }
+
+  /* Animaciones */
+  @keyframes slideDownMenu {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+/* =====================
+   HERO ESTANDARIZADO (Para todas las páginas)
+===================== */
+.hero {
+  position: relative;
+  height: 60vh; /* Altura fija para todas las páginas */
+  min-height: 400px; /* Evita que en pantallas pequeñas sea demasiado corto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  color: #0f172a;
+}
+
+/* Imagen de fondo difuminada */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Difuminado uniforme */
+  transform: scale(1.1); /* Evita bordes blancos por el blur */
+  z-index: 1;
+}
+
+/* Capa de claridad para que el texto resalte */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* Ajusta este valor si quieres más o menos brillo */
+  z-index: 2;
+}
+
+/* Asegurar que el texto esté por encima de las capas */
+.hero h1, .hero p, .hero a, .hero .btn-primary {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño fluido: se ajusta solo según la pantalla */
+  margin-bottom: 15px;
+  max-width: 900px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+/* Imagen para INDEX */
+.hero-index::before {
+  background-image: url("/imagenes/fondo_index.png");
+}
+
+/* Imagen para NOSOTROS */
+.hero-nosotros::before {
+  background-image: url("/imagenes/quines.jpeg");
+}
+
+/* Imagen para SERVICIOS */
+.hero-servicios::before {
+  /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
+     Asegúrate de que esté en la carpeta imagenes */
+  background-image: url("/imagenes/automovil.jfif"); 
+  filter: blur(2px); /* Bajé el difuminado de 4px a 2px para que se vea mejor la foto */
+}
+
+/* Imagen para CONTACTO */
+.hero-contacto::before {
+  background-image: url("/imagenes/carro1.jpg"); /* O la que prefieras para contacto */
+}
+
+/* BOTONES */
+.btn-primary {
+  background: #22c55e;
+  color: white;
+  padding: 15px 42px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #16a34a;
+  transform: translateY(-4px);
+}
+
+/* =====================
+   SECCIONES
+===================== */
+section {
+  padding: 90px 30px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+/* =====================
+   SERVICIOS
+===================== */
+.services-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.btn-secondary {
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0;
+  padding: 14px 38px;
+  border-radius: 40px;
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #22c55e;
+  color: white;
+}
+
+/* ESTILO POR QUÉ ELEGIRNOS */
+.why-us {
+  background: #f8fafc; /* Un gris azulado muy suave para diferenciarla */
+  padding: 100px 20px;
+}
+
+.benefits-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  background: white;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 15px; /* Cuadrado redondeado */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  border-bottom: 3px solid #22c55e;
+}
+
+.benefit-item h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ESTILO DE LA SECCIÓN DE PROCESO */
+.steps {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border-bottom: 5px solid #22c55e; /* Línea verde abajo */
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  background: #f0fdf4; /* Fondo verde muy tenue al pasar el mouse */
+}
+
+.step-number {
+  background: #22c55e;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+/* =====================
+   ESTADÍSTICAS
+===================== */
+.stats {
+  background: #f0fdf4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.8rem;
+  color: #22c55e;
+}
+
+/* =====================
+   CTA
+===================== */
+.cta {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   FOOTER PROFESIONAL
+   ===================== */
+.main-footer {
+  background: #0f172a; /* Azul muy oscuro casi negro */
+  color: #94a3b8;
+  padding: 80px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  text-align: left;
+}
+
+.footer-logo {
+  height: 70px;
+  margin-bottom: 20px;
+  filter: brightness(1.1); /* Resalta el logo en fondo oscuro */
+  border-radius: 8px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+/* Rayita verde bajo los títulos del footer */
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: #22c55e;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #22c55e;
+}
+
+.footer-col p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* =====================
+   DETALLE DE SERVICIOS
+   ===================== */
+.service-detail {
+  padding: 100px 20px;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Efecto Espejo (Invertir columnas) */
+.service-container.mirror {
+  direction: rtl; /* Invierte el orden visual */
+}
+.service-container.mirror .service-text-side {
+  direction: ltr; /* Devuelve el texto a la normalidad */
+}
+
+.service-image-side {
+  position: relative;
+}
+
+.service-image-side img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.specs-mini {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.service-tag {
+  background: #ecfdf5;
+  color: #22c55e;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.service-text-side h2 {
+  text-align: left;
+  margin: 15px 0 25px;
+  font-size: 2.8rem;
+}
+
+.check-list {
+  list-style: none;
+  margin: 25px 0 35px;
+}
+
+.check-list li {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+  color: #475569;
+}
+
+.bg-light { background: #f8fafc; }
+
+/* Responsive para Servicios */
+@media (max-width: 900px) {
+  .service-container, .service-container.mirror {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 40px;
+  }
+}
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+}
+
+/* ================= HERO QUIENES SOMOS ================= */
+.hero-nosotros {
+  min-height: 55vh;
+}
+
+.hero-nosotros::before {
+  background-image: url("/imagenes/quines.jpeg"); /* TU FOTO */
+}
+
+
+/* =====================
+   SERVICIOS (IMAGEN IZQ / TEXTO DER)
+===================== */
+.service-section {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Imágenes */
+.service-images {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.service-images img:hover {
+  transform: scale(1.04);
+}
+
+/* Texto */
+.service-content p {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  color: #334155;
+}
+
+.service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/* ESTILO DE TARJETAS DE SERVICIOS */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  background: #ecfdf5; /* Verde muy clarito */
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.service-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  border-color: #22c55e; /* Borde verde al pasar el mouse */
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+}
+
+.service-box:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-box h3 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-images img {
+    height: 260px;
+  }
+}
+
+/* ===================================================
+   MENU HAMBURGUESA Y RESPONSIVE OPTIMIZADO
+   =================================================== */
+
+/* Ocultar el botón en computadoras */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #22c55e; /* Color verde de tu marca */
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* ===================================================
+   CONTROL DE VISIBILIDAD: PC vs MÓVIL
+   =================================================== */
+
+/* 1. ESTADO POR DEFECTO (Escritorio / Computador) */
+.menu-toggle {
+  display: none; /* Escondido en PC */
+}
+
+.nav-menu {
+  display: flex; /* Horizontal en PC */
+  list-style: none;
+  gap: 32px;
+}
+/* =====================
+   PÁGINA NOSOTROS (NUEVO)
+   ===================== */
+.about-company {
+  padding: 80px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nosotros-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.highlight {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.promesa-box {
+  background: #ecfdf5;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.1);
+  text-align: left;
+}
+
+.promesa-box h3 {
+  margin-bottom: 20px;
+  color: #065f46;
+}
+
+.promesa-box ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e293b;
+}
+
+.promesa-box ul li span {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Misión y Visión Cards */
+.mision-vision {
+  background: #f8fafc;
+  padding: 100px 30px;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nosotros-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #f0fdf4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+}
+/* =====================
+   ESTILOS DE CONTACTO
+   ===================== */
+.contacto-section {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+}
+
+.contacto-form-box {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.contacto-form-box h2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #22c55e;
+  outline: none;
+}
+
+.contacto-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.map-container {
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Ajuste móvil para contacto */
+@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+  .contacto-form-box {
+    padding: 30px 20px;
+  }
+}
+/* ===================================================
+   RESPONSIVE (LO QUE YA TENÍAS)
+   =================================================== */
+/* 2. ESTADO PARA MÓVILES (Optimizado y Suave) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    gap: 5px;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 0; /* Quitamos padding para que los bordes lleguen al final */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-menu li a {
+    padding: 18px; /* Más espacio para que sea fácil tocar con el dedo */
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: #1f2937;
+  }
+
+  /* SUBMENÚ ELEGANTE */
+  .dropdown {
+    position: static;
+    display: none; 
+    width: 100%;
+    background: #f8fafc; /* Color sutilmente diferente */
+    padding: 5px 0;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  /* Animación simple para que no aparezca de golpe */
+  nav ul li:hover .dropdown {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .dropdown a {
+    padding: 12px 20px !important; /* Forzamos un padding más pequeño para los hijos */
+    font-size: 0.92rem;
+    color: #64748b;
+    font-weight: 400;
+  }
+
+  /* Animación de entrada */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hamburguesa a X */
+  .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}
+
+/* ESTILO DE LAS PASTILLAS DE CARACTERÍSTICAS */
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 30px;
+}
+
+.feature-pills span {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+.trust-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trust-card {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: #f8fafc;
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.trust-card:hover {
+  transform: translateY(-10px);
+  border-color: #22c55e;
+}
+
+.trust-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.trust-card h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.trust-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.trust-icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #22c55e; /* El verde que usamos en Nosotros */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+/* =====================
+   BANNER DE ACCIÓN (CTA)
+   ===================== */
+.cta-banner {
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white; /* Forzamos blanco por si el h2 global tiene otro color */
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botón Blanco */
+.btn-cta-white {
+  background: white;
+  color: #15803d;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-cta-white:hover {
+  background: #f8fafc;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Botón Esquema (Contorno) */
+.btn-cta-outline {
+  background: transparent;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.btn-cta-outline:hover {
+  background: white;
+  color: #15803d;
+}
+
+@media (max-width: 768px) {
+  .cta-content h2 { font-size: 1.8rem; }
+  .cta-buttons { flex-direction: column; }
+}
+/* Color verde corporativo para checks y detalles */
+.check-list li::before {
+    content: "✔";
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* =========================================
+   MEJORAS DE VISIBILIDAD: MENÚ Y NAVEGACIÓN
+   ========================================= */
+
+/* 1. Menú más grande y legible */
+.nav-menu li a {
+    font-size: 1.2rem !important; /* Aumentamos el tamaño */
+    font-weight: 700 !important;   /* Lo ponemos en negrita */
+    color: #1e293b;
+    text-transform: uppercase;     /* Se verá más corporativo */
+    padding: 10px 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* 2. Color verde al pasar el mouse */
+.nav-menu li a:hover {
+    color: #22c55e !important;
+}
+
+/* 3. Asegurar espacio para el logo */
+.nav-container {
+    padding: 20px 5%; /* Más aire arriba y abajo */
+}
+
+.logo {
+    height: 75px !important; /* Logo un poco más imponente */
+    width: auto;
+}
+
+/* 4. Mejora para el Menú Móvil (cuando abren el menú en el celular) */
+@media (max-width: 768px) {
+    .nav-menu.active {
+        padding: 40px 0;
+    }
+    .nav-menu li {
+        margin: 20px 0; /* Más espacio entre opciones en el celular */
+    }
+    .nav-menu li a {
+        font-size: 1.5rem !important; /* Súper legible en el móvil */
+    }
+}
+
+/* DISEÑO DE CÍRCULOS VERDES SER SAS */
+.icon-circle-green {
+    width: 75px;
+    height: 75px;
+    background-color: #22c55e; /* Verde corporativo */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 15px rgba(34, 197, 94, 0.2);
+    border: 3px solid #f0fdf4;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto para que los círculos se muevan un poco al pasar el mouse */
+.service-box:hover .icon-circle-green, 
+.benefit-item:hover .icon-circle-green {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Alineación de las cajas */
+.service-box, .benefit-item {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.services-grid, .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos dentro de las cajas */
+.service-box h3, .benefit-item h3 {
+    color: #1e293b;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+/* AJUSTE DE LOGO E IMPULSO DE MARCA */
+.logo {
+    height: 110px !important; /* Aumentamos de 75px a 90px para que destaque */
+    width: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Efecto sutil: el logo crece un poquito al pasar el mouse */
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustamos el contenedor para que el logo grande no quede apretado */
+.nav-container {
+    padding: 15px 5% !important; 
+    display: flex;
+    align-items: center; /* Asegura que el logo y el menú estén centrados horizontalmente */
+}
+
+/* Si el menú se ve muy pegado al logo, le damos aire */
+.nav-menu {
+    margin-left: 40px;
+}
+
+/* Ajuste para celulares: que no ocupe toda la pantalla */
+@media (max-width: 768px) {
+    .logo {
+        height: 70px !important; /* Un poco más pequeño en móviles para que quepa el botón de menú */
+    }
+}
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(34, 197, 94, 0.85); /* Verde SER SAS transparente */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Flechas */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover { background: #22c55e; }
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* =========================================
+   REPARACIÓN DEL SLIDER DE CLIENTES
+   ========================================= */
+
+.clients-slider-section {
+    padding: 60px 0;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    /* Ajustamos el ancho total: (ancho del item + espacio) * cantidad total de logos */
+    width: calc((200px + 60px) * 10); 
+    animation: scroll-infinito 40s linear infinite;
+}
+
+.logo-item {
+    /* Tamaño fijo para que no se vean gigantes */
+    width: 250px; 
+    /* Espacio entre logos */
+    margin: 0 25px; 
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item img {
+    /* Controlamos el tamaño real de la imagen dentro del item */
+    max-width: 180px; 
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* La animación corregida para que el salto no se note */
+@keyframes scroll-infinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Movemos exactamente la mitad del grupo de logos */
+        transform: translateX(calc(-310px * 5)); 
+    }
+}
+
+/* Ajuste para móviles: logos un poco más pequeños */
+@media (max-width: 768px) {
+    .logo-item {
+        width: 150px;
+        margin: 0 15px;
+    }
+    @keyframes scroll-infinito {
+        100% { transform: translateX(calc(-180px * 5)); }
+    }
+}
+
+/* =========================================
+   DISEÑO UNIFICADO: HOJA SER S.A.S
+   ========================================= */
+
+.hero-index, .cta-banner {
+    position: relative;
+    overflow: hidden;
+    /* Aumentamos el espacio para que el texto/botón no choquen con la curva */
+    padding-bottom: 160px !important; 
+    z-index: 1;
+}
+
+.leaf-shape {
+    position: absolute;
+    bottom: -2px; /* Evita fugas de color */
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 10; /* Por encima de los filtros del hero */
+}
+
+.leaf-shape svg {
+    display: block;
+    width: 100%;
+    /* Altura controlada para que no suba demasiado */
+    height: 100px; 
+}
+
+/* Color del relleno: coincide con el fondo de tu página */
+.leaf-shape .fill-bg {
+    fill: #ffffff !important;
+}
+
+/* Animación de la línea verde */
+.leaf-shape path[stroke] {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw-leaf 2s ease-out forwards;
+}
+
+@keyframes draw-leaf {
+    to { stroke-dashoffset: 0; }
+}
+/* =========================================
+   AJUSTES FINALES: IDENTIDAD SER S.A.S.
+   ========================================= */
+
+/* 1. ESTILO DE LA HOJA (Para todas las páginas) */
+.hero, .cta-banner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 160px !important; 
+    z-index: 1;
+}
+
+.leaf-shape {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 10;
+}
+
+.leaf-shape svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.leaf-shape .fill-bg {
+    fill: #f6f9fc; /* Color del fondo de la web */
+}
+
+/* 2. REPARACIÓN DEL SLIDER INFINITO */
+.logos-track {
+    display: flex;
+    align-items: center;
+    width: calc((250px + 60px) * 10); 
+    animation: scroll-infinito 40s linear infinite; 
+}
+
+.logo-item {
+    width: 250px; 
+    margin: 0 30px; 
+    flex-shrink: 0;
+}
+
+@keyframes scroll-infinito {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-310px * 5)); } 
+}
+
+@keyframes draw-leaf {
+    to { stroke-dashoffset: 0; }
+}
+/* =========================================
+   ESTILIZACIÓN DE TEXTO (HERO)
+   ========================================= */
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* Letra extra gruesa */
+    font-size: clamp(2.5rem, 6vw, 4.2rem) !important; /* Más grande y fluida */
+    color: #0f172a; /* Azul muy oscuro para contraste */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px; /* Efecto compacto y moderno */
+}
+
+/* Resaltar una palabra clave en verde */
+.hero h1 span {
+    color: #22c55e;
+}
+
+.hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: #334155;
+    max-width: 750px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Sombra suave al texto si el fondo es muy claro */
+.hero h1, .hero p {
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+.btn-primary {
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;          /* Espacio muy pequeño entre ellos */
+    margin-left: 15px; /* Espacio con respecto a la palabra Contacto */
+}
+
+.social-icon-svg {
+    width: 22px;
+    height: 22px;
+    fill: #22c55e;     /* Tu verde característico */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon-svg:hover {
+    transform: scale(1.15);
+    fill: #16a34a;    /* Verde un poco más oscuro al pasar el mouse */
+}
+
+
+/* =====================
+   HERO ESTANDARIZADO (Para todas las páginas)
+===================== */
+.hero {
+  position: relative;
+  height: 60vh; /* Altura fija para todas las páginas */
+  min-height: 400px; /* Evita que en pantallas pequeñas sea demasiado corto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  color: #0f172a;
+}
+
+/* Imagen de fondo difuminada */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Difuminado uniforme */
+  transform: scale(1.1); /* Evita bordes blancos por el blur */
+  z-index: 1;
+}
+
+/* Capa de claridad para que el texto resalte */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* Ajusta este valor si quieres más o menos brillo */
+  z-index: 2;
+}
+
+/* Asegurar que el texto esté por encima de las capas */
+.hero h1, .hero p, .hero a, .hero .btn-primary {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño fluido: se ajusta solo según la pantalla */
+  margin-bottom: 15px;
+  max-width: 900px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+/* Imagen para INDEX */
+.hero-index::before {
+  background-image: url("/imagenes/fondo_index.png");
+}
+
+/* Imagen para NOSOTROS */
+.hero-nosotros::before {
+  background-image: url("/imagenes/quines.jpeg");
+}
+
+/* Imagen para SERVICIOS */
+.hero-servicios::before {
+  /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
+     Asegúrate de que esté en la carpeta imagenes */
+  background-image: url("/imagenes/automovil.jfif"); 
+  filter: blur(2px); /* Bajé el difuminado de 4px a 2px para que se vea mejor la foto */
+}
+
+/* Imagen para CONTACTO */
+.hero-contacto::before {
+  background-image: url("/imagenes/carro1.jpg"); /* O la que prefieras para contacto */
+}
+
+/* BOTONES */
+.btn-primary {
+  background: #22c55e;
+  color: white;
+  padding: 15px 42px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #16a34a;
+  transform: translateY(-4px);
+}
+
+/* =====================
+   SECCIONES
+===================== */
+section {
+  padding: 90px 30px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+/* =====================
+   SERVICIOS
+===================== */
+.services-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.btn-secondary {
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0;
+  padding: 14px 38px;
+  border-radius: 40px;
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #22c55e;
+  color: white;
+}
+
+/* ESTILO POR QUÉ ELEGIRNOS */
+.why-us {
+  background: #f8fafc; /* Un gris azulado muy suave para diferenciarla */
+  padding: 100px 20px;
+}
+
+.benefits-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  background: white;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 15px; /* Cuadrado redondeado */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  border-bottom: 3px solid #22c55e;
+}
+
+.benefit-item h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ESTILO DE LA SECCIÓN DE PROCESO */
+.steps {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border-bottom: 5px solid #22c55e; /* Línea verde abajo */
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  background: #f0fdf4; /* Fondo verde muy tenue al pasar el mouse */
+}
+
+.step-number {
+  background: #22c55e;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+/* =====================
+   ESTADÍSTICAS
+===================== */
+.stats {
+  background: #f0fdf4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.8rem;
+  color: #22c55e;
+}
+
+/* =====================
+   CTA
+===================== */
+.cta {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   FOOTER PROFESIONAL
+   ===================== */
+.main-footer {
+  background: #0f172a; /* Azul muy oscuro casi negro */
+  color: #94a3b8;
+  padding: 80px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  text-align: left;
+}
+
+.footer-logo {
+  height: 70px;
+  margin-bottom: 20px;
+  filter: brightness(1.1); /* Resalta el logo en fondo oscuro */
+  border-radius: 8px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+/* Rayita verde bajo los títulos del footer */
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: #22c55e;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #22c55e;
+}
+
+.footer-col p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* =====================
+   DETALLE DE SERVICIOS
+   ===================== */
+.service-detail {
+  padding: 100px 20px;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Efecto Espejo (Invertir columnas) */
+.service-container.mirror {
+  direction: rtl; /* Invierte el orden visual */
+}
+.service-container.mirror .service-text-side {
+  direction: ltr; /* Devuelve el texto a la normalidad */
+}
+
+.service-image-side {
+  position: relative;
+}
+
+.service-image-side img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.specs-mini {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.service-tag {
+  background: #ecfdf5;
+  color: #22c55e;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.service-text-side h2 {
+  text-align: left;
+  margin: 15px 0 25px;
+  font-size: 2.8rem;
+}
+
+.check-list {
+  list-style: none;
+  margin: 25px 0 35px;
+}
+
+.check-list li {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+  color: #475569;
+}
+
+.bg-light { background: #f8fafc; }
+
+/* Responsive para Servicios */
+@media (max-width: 900px) {
+  .service-container, .service-container.mirror {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 40px;
+  }
+}
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+}
+
+/* ================= HERO QUIENES SOMOS ================= */
+.hero-nosotros {
+  min-height: 55vh;
+}
+
+.hero-nosotros::before {
+  background-image: url("/imagenes/quines.jpeg"); /* TU FOTO */
+}
+
+
+/* =====================
+   SERVICIOS (IMAGEN IZQ / TEXTO DER)
+===================== */
+.service-section {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Imágenes */
+.service-images {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.service-images img:hover {
+  transform: scale(1.04);
+}
+
+/* Texto */
+.service-content p {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  color: #334155;
+}
+
+.service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/* ESTILO DE TARJETAS DE SERVICIOS */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  background: #ecfdf5; /* Verde muy clarito */
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.service-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  border-color: #22c55e; /* Borde verde al pasar el mouse */
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+}
+
+.service-box:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-box h3 {
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-images img {
+    height: 260px;
+  }
+}
+
+/* ===================================================
+   MENU HAMBURGUESA Y RESPONSIVE OPTIMIZADO
+   =================================================== */
+
+/* Ocultar el botón en computadoras */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #22c55e; /* Color verde de tu marca */
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* ===================================================
+   CONTROL DE VISIBILIDAD: PC vs MÓVIL
+   =================================================== */
+
+/* 1. ESTADO POR DEFECTO (Escritorio / Computador) */
+.menu-toggle {
+  display: none; /* Escondido en PC */
+}
+
+.nav-menu {
+  display: flex; /* Horizontal en PC */
+  list-style: none;
+  gap: 32px;
+}
+/* =====================
+   PÁGINA NOSOTROS (NUEVO)
+   ===================== */
+.about-company {
+  padding: 80px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nosotros-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.highlight {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.promesa-box {
+  background: #ecfdf5;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.1);
+  text-align: left;
+}
+
+.promesa-box h3 {
+  margin-bottom: 20px;
+  color: #065f46;
+}
+
+.promesa-box ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e293b;
+}
+
+.promesa-box ul li span {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Misión y Visión Cards */
+.mision-vision {
+  background: #f8fafc;
+  padding: 100px 30px;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nosotros-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #f0fdf4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+}
+/* =====================
+   ESTILOS DE CONTACTO
+   ===================== */
+.contacto-section {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+}
+
+.contacto-form-box {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.contacto-form-box h2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #22c55e;
+  outline: none;
+}
+
+.contacto-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.map-container {
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Ajuste móvil para contacto */
+@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+  .contacto-form-box {
+    padding: 30px 20px;
+  }
+}
+/* ===================================================
+   RESPONSIVE (LO QUE YA TENÍAS)
+   =================================================== */
+/* 2. ESTADO PARA MÓVILES (Optimizado y Suave) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    gap: 5px;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 0; /* Quitamos padding para que los bordes lleguen al final */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-menu li a {
+    padding: 18px; /* Más espacio para que sea fácil tocar con el dedo */
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: #1f2937;
+  }
+
+  /* SUBMENÚ ELEGANTE */
+  .dropdown {
+    position: static;
+    display: none; 
+    width: 100%;
+    background: #f8fafc; /* Color sutilmente diferente */
+    padding: 5px 0;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  /* Animación simple para que no aparezca de golpe */
+  nav ul li:hover .dropdown {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .dropdown a {
+    padding: 12px 20px !important; /* Forzamos un padding más pequeño para los hijos */
+    font-size: 0.92rem;
+    color: #64748b;
+    font-weight: 400;
+  }
+
+  /* Animación de entrada */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hamburguesa a X */
+  .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}
+
+/* ESTILO DE LAS PASTILLAS DE CARACTERÍSTICAS */
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 30px;
+}
+
+.feature-pills span {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+.trust-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trust-card {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: #f8fafc;
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.trust-card:hover {
+  transform: translateY(-10px);
+  border-color: #22c55e;
+}
+
+.trust-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.trust-card h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.trust-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.trust-icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #22c55e; /* El verde que usamos en Nosotros */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+/* =====================
+   BANNER DE ACCIÓN (CTA)
+   ===================== */
+.cta-banner {
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white; /* Forzamos blanco por si el h2 global tiene otro color */
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botón Blanco */
+.btn-cta-white {
+  background: white;
+  color: #15803d;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-cta-white:hover {
+  background: #f8fafc;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Botón Esquema (Contorno) */
+.btn-cta-outline {
+  background: transparent;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.btn-cta-outline:hover {
+  background: white;
+  color: #15803d;
+}
+
+@media (max-width: 768px) {
+  .cta-content h2 { font-size: 1.8rem; }
+  .cta-buttons { flex-direction: column; }
+}
+/* Color verde corporativo para checks y detalles */
+.check-list li::before {
+    content: "✔";
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* =========================================
+   MEJORAS DE VISIBILIDAD: MENÚ Y NAVEGACIÓN
+   ========================================= */
+
+/* 1. Menú más grande y legible */
+.nav-menu li a {
+    font-size: 1.2rem !important; /* Aumentamos el tamaño */
+    font-weight: 700 !important;   /* Lo ponemos en negrita */
+    color: #1e293b;
+    text-transform: uppercase;     /* Se verá más corporativo */
+    padding: 10px 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* 2. Color verde al pasar el mouse */
+.nav-menu li a:hover {
+    color: #22c55e !important;
+}
+
+/* 3. Asegurar espacio para el logo */
+.nav-container {
+    padding: 20px 5%; /* Más aire arriba y abajo */
+}
+
+.logo {
+    height: 75px !important; /* Logo un poco más imponente */
+    width: auto;
+}
+
+/* 4. Mejora para el Menú Móvil (cuando abren el menú en el celular) */
+@media (max-width: 768px) {
+    .nav-menu.active {
+        padding: 40px 0;
+    }
+    .nav-menu li {
+        margin: 20px 0; /* Más espacio entre opciones en el celular */
+    }
+    .nav-menu li a {
+        font-size: 1.5rem !important; /* Súper legible en el móvil */
+    }
+}
+
+/* DISEÑO DE CÍRCULOS VERDES SER SAS */
+.icon-circle-green {
+    width: 75px;
+    height: 75px;
+    background-color: #22c55e; /* Verde corporativo */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 15px rgba(34, 197, 94, 0.2);
+    border: 3px solid #f0fdf4;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto para que los círculos se muevan un poco al pasar el mouse */
+.service-box:hover .icon-circle-green, 
+.benefit-item:hover .icon-circle-green {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Alineación de las cajas */
+.service-box, .benefit-item {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.services-grid, .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos dentro de las cajas */
+.service-box h3, .benefit-item h3 {
+    color: #1e293b;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+/* AJUSTE DE LOGO E IMPULSO DE MARCA */
+.logo {
+    height: 110px !important; /* Aumentamos de 75px a 90px para que destaque */
+    width: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Efecto sutil: el logo crece un poquito al pasar el mouse */
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustamos el contenedor para que el logo grande no quede apretado */
+.nav-container {
+    padding: 15px 5% !important; 
+    display: flex;
+    align-items: center; /* Asegura que el logo y el menú estén centrados horizontalmente */
+}
+
+/* Si el menú se ve muy pegado al logo, le damos aire */
+.nav-menu {
+    margin-left: 40px;
+}
+
+/* Ajuste para celulares: que no ocupe toda la pantalla */
+@media (max-width: 768px) {
+    .logo {
+        height: 70px !important; /* Un poco más pequeño en móviles para que quepa el botón de menú */
+    }
+}
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(34, 197, 94, 0.85); /* Verde SER SAS transparente */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Flechas */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover { background: #22c55e; }
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* =========================================
+   REPARACIÓN DEL SLIDER DE CLIENTES
+   ========================================= */
+
+.clients-slider-section {
+    padding: 60px 0;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    /* Ajustamos el ancho total: (ancho del item + espacio) * cantidad total de logos */
+    width: calc((200px + 60px) * 10); 
+    animation: scroll-infinito 40s linear infinite;
+}
+
+.logo-item {
+    /* Tamaño fijo para que no se vean gigantes */
+    width: 250px; 
+    /* Espacio entre logos */
+    margin: 0 25px; 
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item img {
+    /* Controlamos el tamaño real de la imagen dentro del item */
+    max-width: 180px; 
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* La animación corregida para que el salto no se note */
+@keyframes scroll-infinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Movemos exactamente la mitad del grupo de logos */
+        transform: translateX(calc(-310px * 5)); 
+    }
+}
+
+/* Ajuste para móviles: logos un poco más pequeños */
+@media (max-width: 768px) {
+    .logo-item {
+        width: 150px;
+        margin: 0 15px;
+    }
+    @keyframes scroll-infinito {
+        100% { transform: translateX(calc(-180px * 5)); }
+    }
+}
+
+/* =========================================
+   DISEÑO UNIFICADO: HOJA SER S.A.S
+   ========================================= */
+
+.hero-index, .cta-banner {
+    position: relative;
+    overflow: hidden;
+    /* Aumentamos el espacio para que el texto/botón no choquen con la curva */
+    padding-bottom: 160px !important; 
+    z-index: 1;
+}
+
+.leaf-shape {
+    position: absolute;
+    bottom: -2px; /* Evita fugas de color */
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 10; /* Por encima de los filtros del hero */
+}
+
+.leaf-shape svg {
+    display: block;
+    width: 100%;
+    /* Altura controlada para que no suba demasiado */
+    height: 100px; 
+}
+
+/* Color del relleno: coincide con el fondo de tu página */
+.leaf-shape .fill-bg {
+    fill: #ffffff !important;
+}
+
+/* Animación de la línea verde */
+.leaf-shape path[stroke] {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw-leaf 2s ease-out forwards;
+}
+
+@keyframes draw-leaf {
+    to { stroke-dashoffset: 0; }
+}
+/* =========================================
+   AJUSTES FINALES: IDENTIDAD SER S.A.S.
+   ========================================= */
+
+/* 1. ESTILO DE LA HOJA (Para todas las páginas) */
+.hero, .cta-banner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 160px !important; 
+    z-index: 1;
+}
+
+.leaf-shape {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 10;
+}
+
+.leaf-shape svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.leaf-shape .fill-bg {
+    fill: #f6f9fc; /* Color del fondo de la web */
+}
+
+/* 2. REPARACIÓN DEL SLIDER INFINITO */
+.logos-track {
+    display: flex;
+    align-items: center;
+    width: calc((250px + 60px) * 10); 
+    animation: scroll-infinito 40s linear infinite; 
+}
+
+.logo-item {
+    width: 250px; 
+    margin: 0 30px; 
+    flex-shrink: 0;
+}
+
+@keyframes scroll-infinito {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-310px * 5)); } 
+}
+
+@keyframes draw-leaf {
+    to { stroke-dashoffset: 0; }
+}
+/* =========================================
+   ESTILIZACIÓN DE TEXTO (HERO)
+   ========================================= */
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* Letra extra gruesa */
+    font-size: clamp(2.5rem, 6vw, 4.2rem) !important; /* Más grande y fluida */
+    color: #0f172a; /* Azul muy oscuro para contraste */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px; /* Efecto compacto y moderno */
+}
+
+/* Resaltar una palabra clave en verde */
+.hero h1 span {
+    color: #22c55e;
+}
+
+.hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: #334155;
+    max-width: 750px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Sombra suave al texto si el fondo es muy claro */
+.hero h1, .hero p {
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+.btn-primary {
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;          /* Espacio muy pequeño entre ellos */
+    margin-left: 15px; /* Espacio con respecto a la palabra Contacto */
+}
+
+.social-icon-svg {
+    width: 22px;
+    height: 22px;
+    fill: #22c55e;     /* Tu verde característico */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon-svg:hover {
+    transform: scale(1.15);
+    fill: #16a34a;    /* Verde un poco más oscuro al pasar el mouse */
+}
+
+/* =========================================
+   ANIMACIONES DE DESPLAZAMIENTO (SCROLL)
+   ========================================= */
+
+/* Estado inicial: oculto y un poco más abajo */
+.revelar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado activo: cuando el usuario llega al elemento */
+.revelar.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variación: Entrada desde la izquierda */
+.revelar-izq {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.revelar-izq.activo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hace que los botones crezcan un poquito y brillen al pasar el mouse */
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+}
+
+.nav-menu li a {
+    position: relative;
+    font-weight: 500;
+}
+
+/* Crea una rayita verde que aparece debajo de cada link del menú */
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #22c55e;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Contenedor principal de los iconos */
+  .nav-menu li.nav-socials {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 35px !important; /* Espacio generoso entre los dos iconos */
+    margin: 40px 0 !important; /* Espacio arriba y abajo */
+    width: 100% !important;
+  }
+
+  /* El enlace que envuelve al icono */
+  .nav-socials a {
+    display: flex !important;
+    width: 60px !important;  /* Área táctil más grande */
+    height: 60px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+  }
+
+  /* El icono SVG real */
+  .social-icon-svg {
+    width: 50px !important;  /* ¡Ahora sí están grandes! */
+    height: 50px !important;
+    fill: #22c55e !important; /* El verde de SER S.A.S */
+    transition: transform 0.2s ease;
+  }
+
+  /* Efecto visual al tocarlos */
+  .nav-socials a:active .social-icon-svg {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+}
+
+/* BOTÓN SUBIR (IZQUIERDA) */
+.btn-top {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    width: 55px;         /* Un poco más ancho para que luzca la flecha */
+    height: 55px;
+    background: #278fe4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    /* AJUSTE DE LA FLECHA */
+    font-size: 28px;     /* ¡Aquí está el tamaño grande! */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.btn-top:hover {
+    background: #22c55e;
+    transform: scale(1.1); /* Crece un poquito al pasar el mouse */
+}
+
+/* Clase para que los elementos aparezcan desde abajo */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
