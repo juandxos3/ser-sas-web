@@ -3690,3 +3690,47 @@ section h2 {
     margin-top: 10px; /* Refuerzo de separación */
   }
 }
+
+/* AJUSTE FINAL PARA MÓVILES PEQUEÑOS */
+@media (max-width: 480px) {
+  /* 1. Bajamos el Hero para que no se choque con el Header */
+  .hero {
+    padding-top: 140px !important; /* Espacio para que el logo no tape el texto */
+    padding-bottom: 60px !important;
+    min-height: 85vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* 2. Achicamos el título para que no se monte */
+  .hero h1 {
+    font-size: 1.6rem !important; /* Estaba muy grande, aquí cabrá bien */
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+    padding: 0 10px;
+  }
+
+  /* 3. El párrafo necesita menos margen para que el botón suba un poco */
+  .hero p {
+    font-size: 0.9rem !important;
+    margin-bottom: 25px !important;
+    line-height: 1.4;
+  }
+
+  /* 4. El botón de Cotización: más estilizado para que no ocupe media pantalla */
+  .btn-primary {
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+    width: auto !important;
+    max-width: 250px;
+    margin: 0 auto; /* Lo centramos por si acaso */
+  }
+
+  /* 5. Los botones flotantes (WhatsApp y Flecha) */
+  /* Los hacemos un poquito más pequeños para que no tapen el contenido */
+  .whatsapp-btn, .scroll-top-btn {
+    transform: scale(0.8); 
+    bottom: 15px !important;
+  }
+}
