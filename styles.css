@@ -3705,10 +3705,13 @@ section h2 {
 
   /* 2. Achicamos el título para que no se monte */
   .hero h1 {
-    font-size: 1.6rem !important; /* Estaba muy grande, aquí cabrá bien */
-    line-height: 1.1 !important;
-    margin-bottom: 10px !important;
-    padding: 0 10px;
+    /* Esto hace que el tamaño sea dinámico entre 1.8 y 2.2 dependiendo del ancho exacto */
+    font-size: calc(1.7rem + 1.5vw) !important; 
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+    padding: 0 5px;
+    letter-spacing: -0.5px; /* Junta un pelín las letras para ganar espacio */
+    font-weight: 800;
   }
 
   /* 3. El párrafo necesita menos margen para que el botón suba un poco */
