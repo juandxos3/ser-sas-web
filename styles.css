@@ -3386,29 +3386,6 @@ section h2 {
   }
 }
 
-/* BOTÓN SUBIR (IZQUIERDA) */
-.btn-top {
-    position: fixed;
-    bottom: 25px;
-    left: 20px;
-    width: 55px;         /* Un poco más ancho para que luzca la flecha */
-    height: 55px;
-    background: #278fe4;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    
-    /* AJUSTE DE LA FLECHA */
-    font-size: 28px;     /* ¡Aquí está el tamaño grande! */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 999;
-    transition: all 0.3s ease;
-}
 
 /* EFECTO HOVER */
 .btn-top:hover {
@@ -3432,3 +3409,189 @@ section h2 {
     }
 }
 
+.btn-top {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    width: 60px;     /* Más grande para que se vea bien en celular */
+    height: 60px;
+    background: #278fe4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 35px; /* Flecha imponente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    /* El contenedor del menú (el que se abre) */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Empieza escondido fuera de la pantalla */
+        width: 80%;   /* Ocupa el 80% del ancho del celular */
+        height: 100vh;
+        background-color: #ffffff; /* Fondo blanco sólido */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea los items desde arriba */
+        align-items: center;
+        padding-top: 100px; /* Espacio para que el logo/X no lo tapen */
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+        
+        /* SOLUCIÓN AL ERROR DE SCROLL: */
+        overflow-y: auto; 
+        box-shadow: -10px 0 20px rgba(0,0,0,0.2);
+    }
+
+    /* Clase que se activa con JS para mostrar el menú */
+    .nav-menu.active {
+        right: 0; /* Entra a la pantalla */
+    }
+
+    /* Estilo de los enlaces dentro del menú móvil */
+    .nav-menu li {
+        margin: 15px 0;
+        list-style: none;
+        width: 100%; /* Para que el área de clic sea mayor */
+        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 20px;
+        color: #1e293b !important; /* Color oscuro para que se vea sobre el blanco */
+        text-decoration: none;
+        font-weight: 600;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Asegúrate de que el botón de abrir (hamburguesa) esté por encima de todo */
+    .menu-toggle {
+        z-index: 1100;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+/* =========================================
+   ESTILO CELULAR DEFINITIVO (FIX SCROLL)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. El botón Hamburguesa debe ser visible y estar arriba */
+    .menu-toggle {
+        display: flex !important;
+        z-index: 1100;
+    }
+
+    /* 2. El Menú Desplegable */
+    .nav-menu {
+        display: none; /* Se activa con la clase .active */
+        position: fixed; /* Cambiado de absolute a fixed para controlar el scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Ocupa toda la pantalla */
+        background: #ffffff;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 20px 40px 20px !important; /* Espacio arriba para no tapar el logo */
+        z-index: 1000;
+        
+        /* ESTO ARREGLA EL ERROR DE SCROLL */
+        overflow-y: auto !important; 
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-menu.active {
+        display: flex !important;
+    }
+
+    /* 3. Los Items del Menú */
+    .nav-menu li {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px !important;
+        font-size: 1.3rem !important;
+        color: #1e293b !important; /* Color oscuro para que SE VEA */
+        font-weight: 800 !important;
+        text-transform: uppercase;
+    }
+
+    /* 4. Redes Sociales al final del menú */
+    .nav-socials {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px !important;
+        padding-bottom: 50px; /* Espacio extra al final para poder scrollear */
+    }
+
+    /* 5. Flecha de subir (Ajuste de tamaño) */
+    .btn-top {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 35px !important;
+        left: 20px !important;
+        bottom: 25px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. EL CONTENEDOR (Asegura el scroll) */
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Ocupa toda la pantalla */
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 20px 60px 20px; /* Más espacio abajo para alcanzar redes */
+        z-index: 1000;
+        
+        /* FIX DE SCROLL FINAL */
+        overflow-y: scroll !important; 
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 2. LOS ENLACES (Tipografía correcta) */
+    .nav-menu li a {
+        /* Usamos Montserrat que ya tienes importada en tu CSS */
+        font-family: 'Montserrat', sans-serif !important; 
+        font-size: 1.4rem !important;
+        font-weight: 800 !important; /* Estilo 'ExtraBold' como tus títulos */
+        color: #1e293b !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 20px !important;
+        display: block;
+    }
+
+    /* 3. SUBMENÚ (Tipografía secundaria) */
+    .dropdown a {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+        text-transform: none;
+        color: #64748b !important;
+    }
+}
