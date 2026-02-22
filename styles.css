@@ -3653,3 +3653,40 @@ section h2 {
     width: fit-content;
   }
 }
+
+@media (max-width: 480px) {
+  /* 1. Le damos aire al contenedor para que no apriete los elementos */
+  .hero {
+    height: auto !important;
+    min-height: 90vh; /* Un poco más alto para pantallas pequeñas */
+    padding: 140px 20px 80px 20px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 2. Ajuste del título para que no ocupe tanto espacio vertical */
+  .hero h1 {
+    font-size: 1.55rem !important; 
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 3. El párrafo: le damos un margen abajo para separar el botón */
+  .hero p {
+    font-size: 0.95rem !important;
+    margin-bottom: 35px !important; /* EMPUJA el botón hacia abajo */
+    line-height: 1.4;
+  }
+
+  /* 4. El Botón: Evitamos que sea demasiado ancho */
+  .btn-primary {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 200px; /* Tamaño cómodo para el dedo */
+    padding: 14px 25px !important;
+    font-size: 0.95rem !important;
+    margin-top: 10px; /* Refuerzo de separación */
+  }
+}
