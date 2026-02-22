@@ -532,25 +532,25 @@ nav ul li:hover .dropdown {
 }
 /* Imagen para INDEX */
 .hero-index::before {
-  background-image: url("/imagenes/fondo_index.png");
+  background-image: url("imagenes/fondo_index.png");
 }
 
 /* Imagen para NOSOTROS */
 .hero-nosotros::before {
-  background-image: url("/imagenes/quines.jpeg");
+  background-image: url("imagenes/quines.jpeg");
 }
 
 /* Imagen para SERVICIOS */
 .hero-servicios::before {
   /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
      Asegúrate de que esté en la carpeta imagenes */
-  background-image: url("/imagenes/automovil.jfif"); 
+  background-image: url("imagenes/automovil.jfif"); 
   filter: blur(2px); /* Bajé el difuminado de 4px a 2px para que se vea mejor la foto */
 }
 
 /* Imagen para CONTACTO */
 .hero-contacto::before {
-  background-image: url("/imagenes/carro1.jpg"); /* O la que prefieras para contacto */
+  background-image: url("imagenes/carro1.jpg"); /* O la que prefieras para contacto */
 }
 
 /* BOTONES */
@@ -925,7 +925,7 @@ section h2 {
 }
 
 .hero-nosotros::before {
-  background-image: url("/imagenes/quines.jpeg"); /* TU FOTO */
+  background-image: url("imagenes/quines.jpeg"); /* TU FOTO */
 }
 
 
@@ -1941,25 +1941,25 @@ section h2 {
 }
 /* Imagen para INDEX */
 .hero-index::before {
-  background-image: url("/imagenes/fondo_index.png");
+  background-image: url("imagenes/fondo_index.png");
 }
 
 /* Imagen para NOSOTROS */
 .hero-nosotros::before {
-  background-image: url("/imagenes/quines.jpeg");
+  background-image: url("imagenes/quines.jpeg");
 }
 
 /* Imagen para SERVICIOS */
 .hero-servicios::before {
   /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
      Asegúrate de que esté en la carpeta imagenes */
-  background-image: url("/imagenes/automovil.jfif"); 
+  background-image: url("imagenes/automovil.jfif"); 
   filter: blur(2px); /* Bajé el difuminado de 4px a 2px para que se vea mejor la foto */
 }
 
 /* Imagen para CONTACTO */
 .hero-contacto::before {
-  background-image: url("/imagenes/carro1.jpg"); /* O la que prefieras para contacto */
+  background-image: url("imagenes/carro1.jpg"); /* O la que prefieras para contacto */
 }
 
 /* BOTONES */
@@ -2334,7 +2334,7 @@ section h2 {
 }
 
 .hero-nosotros::before {
-  background-image: url("/imagenes/quines.jpeg"); /* TU FOTO */
+  background-image: url("imagenes/quines.jpeg"); /* TU FOTO */
 }
 
 
