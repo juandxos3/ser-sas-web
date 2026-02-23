@@ -3737,3 +3737,42 @@ section h2 {
     bottom: 15px !important;
   }
 }
+
+@media (max-width: 480px) {
+    /* 1. MOVE EL CUADRO VERDE HACIA ARRIBA */
+    .slide-caption {
+        position: absolute !important;
+        bottom: auto !important;    /* Cancela la posición de abajo */
+        top: 15px !important;       /* Lo pega al borde superior */
+        left: 15px !important;      /* Lo alinea a la izquierda */
+        width: auto !important;     /* Asegura que no ocupe todo el ancho */
+        background-color: rgba(40, 167, 69, 0.9) !important; /* Mantiene el verde */
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        font-size: 0.8rem !important;
+        z-index: 10 !important;
+    }
+
+    /* 2. ASEGURA QUE LAS CARACTERÍSTICAS SE QUEDEN ABAJO */
+    .specs-mini {
+        position: absolute !important;
+        bottom: 10px !important;    /* Se mantiene en la base */
+        top: auto !important;       /* Evita conflictos con 'top' */
+        left: 50% !important;
+        transform: translateX(-50%) !important; /* Lo centra horizontalmente */
+        width: 90% !important;      /* Un poco más ancho para que respire */
+        background: white !important;
+        padding: 10px !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        justify-content: space-around !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    }
+
+    /* 3. AJUSTE DE LA IMAGEN PARA QUE NADA SE CORTE */
+    .gallery-container {
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 15px !important;
+    }
+}
