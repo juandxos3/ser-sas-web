@@ -1959,7 +1959,7 @@ section h2 {
 
 /* Imagen para CONTACTO */
 .hero-contacto::before {
-  background-image: url("imagenes/carro1.jpg"); /* O la que prefieras para contacto */
+  background-image: url("imagenes/fondocontacto.jpeg"); /* O la que prefieras para contacto */
 }
 
 /* BOTONES */
