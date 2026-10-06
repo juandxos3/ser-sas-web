@@ -7,7 +7,9 @@
 .ser-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 230px; padding: 14px; background: white; border-radius: 14px; box-shadow: 0 15px 40px #12352426; }
 .ser-dropdown a { display: block; padding: 10px; border-radius: 8px; }
 .ser-dropdown a:hover { background: #edf8f0; }
-.ser-menu li:hover > .ser-dropdown, .ser-menu li:focus-within > .ser-dropdown { display: block; }
+@media (min-width: 769px) {
+  .ser-menu li:hover > .ser-dropdown, .ser-menu li:focus-within > .ser-dropdown { display: block; }
+}
 .ser-socials { display: flex; gap: 14px; align-items: center; }
 .ser-socials a { display: inline-flex; align-items: center; justify-content: center; }
 .ser-socials svg { width: 23px; height: 23px; fill: #168447; }
