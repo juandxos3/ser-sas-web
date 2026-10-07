@@ -4,6 +4,8 @@
   const toggle = nav.querySelector('.ser-toggle');
   const menu = nav.querySelector('.ser-menu');
   const sub = nav.querySelector('.ser-subtoggle');
+  const desktopTrigger = nav.querySelector('.ser-desktop-trigger');
+  const header = nav.closest('header');
   const mobile = matchMedia('(max-width: 768px)');
   const backdrop = document.createElement('div');
   backdrop.className = 'ser-backdrop';
@@ -36,8 +38,7 @@
       menu.querySelector('a').focus({preventScroll: true});
     }
     if (!open) {
-      sub.setAttribute('aria-expanded', 'false');
-      sub.setAttribute('aria-label', 'Mostrar servicios');
+      setSubmenu(false);
       if (wasOpen) {
         background.splice(0).forEach(([el, inert]) => { el.inert = inert; });
         savedBodyStyles.forEach(([key, value]) => { document.body.style[key] = value; });
@@ -48,13 +49,31 @@
   }
   toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
   backdrop.addEventListener('click', () => setOpen(false));
-  sub.addEventListener('click', () => {
-    const open = sub.getAttribute('aria-expanded') !== 'true';
+  function setSubmenu(open) {
     sub.setAttribute('aria-expanded', String(open));
     sub.setAttribute('aria-label', open ? 'Ocultar servicios' : 'Mostrar servicios');
+    desktopTrigger.setAttribute('aria-expanded', String(open));
+  }
+  sub.addEventListener('click', () => setSubmenu(sub.getAttribute('aria-expanded') !== 'true'));
+  desktopTrigger.addEventListener('click', () => setSubmenu(desktopTrigger.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('click', event => {
+    if (!desktopTrigger.parentElement.contains(event.target)) setSubmenu(false);
   });
+  nav.addEventListener('focusout', event => {
+    if (!mobile.matches && !desktopTrigger.parentElement.contains(event.relatedTarget)) setSubmenu(false);
+  });
+  function updateHeader() {
+    if (!document.body.classList.contains('ser-menu-open')) {
+      header.classList.toggle('ser-scrolled', window.scrollY > 80);
+    }
+  }
+  window.addEventListener('scroll', updateHeader, {passive: true});
+  updateHeader();
   menu.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false, false); });
   document.addEventListener('keydown', event => {
+    if (!mobile.matches && event.key === 'Escape' && desktopTrigger.getAttribute('aria-expanded') === 'true') {
+      setSubmenu(false); desktopTrigger.focus(); return;
+    }
     if (toggle.getAttribute('aria-expanded') !== 'true') return;
     if (event.key === 'Escape') { event.preventDefault(); setOpen(false); }
     if (event.key === 'Tab') {

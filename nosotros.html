@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link rel="icon" href="imagenes/logosinfondo.webp" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="menu.css?v=20261006-header">
 </head>
 
 <body>
@@ -43,9 +43,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="index.html">Inicio</a></li>
     <li><a href="nosotros.html" aria-current="page">Quiénes somos</a></li>
     <li>
-      <a href="servicios.html">Servicios</a>
+      <a class="ser-services-link" href="servicios.html">Servicios</a>
+      <button type="button" class="ser-desktop-trigger" aria-expanded="false" aria-controls="ser-servicios">Servicios <span aria-hidden="true">⌄</span></button>
       <button class="ser-subtoggle" type="button" aria-label="Mostrar servicios" aria-controls="ser-servicios" aria-expanded="false">⌄</button>
       <div class="ser-dropdown" id="ser-servicios">
+        <a class="ser-all-services" href="servicios.html">Ver todos los servicios</a>
         <a href="servicios.html#alquiler">Alquiler de baños</a>
         <a href="servicios.html#residuos">Residuos</a>
         <a href="servicios.html#pozos">Pozos sépticos</a>
@@ -200,6 +202,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   });
 </script>
-<script src="menu.js" defer></script>
+<script src="menu.js?v=20261006-header" defer></script>
 </body>
 </html>
