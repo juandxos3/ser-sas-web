@@ -170,3 +170,25 @@ header.ser-scrolled .logo { height: 54px !important; }
     line-height: 1.55;
   }
 }
+
+/* Reglas antiguas del sitio usan !important en móvil: se mantiene la portada alineada. */
+@media (max-width: 768px) {
+  .hero.hero-index { align-items: flex-start !important; }
+  .hero-index .hero-copy h1 {
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+    padding: 0 !important;
+    font-size: clamp(2.1rem, 9vw, 2.65rem) !important;
+    text-align: left !important;
+  }
+  .hero-index .hero-copy p {
+    margin-bottom: 24px !important;
+    font-size: 1rem !important;
+  }
+  .hero-index .hero-copy .btn-primary {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 13px 27px !important;
+    font-size: 1rem !important;
+  }
+}
