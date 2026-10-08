@@ -81,3 +81,92 @@ header.ser-scrolled .logo { height: 54px !important; }
 @media (prefers-reduced-motion: reduce) {
   header:has(.ser-nav) .nav-container, header:has(.ser-nav) .logo { transition: none; }
 }
+
+/* Portada: foto nítida, texto legible y composición natural. */
+.hero.hero-index {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 560px;
+  padding: clamp(112px, 15vh, 156px) 8% 180px !important;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  color: #fff;
+}
+.hero.hero-index::before {
+  background-position: center 46%;
+  filter: none;
+  transform: none;
+}
+.hero.hero-index::after {
+  background: linear-gradient(90deg, rgba(12, 42, 28, .88) 0%, rgba(16, 51, 34, .78) 36%, rgba(18, 51, 35, .40) 61%, rgba(10, 24, 18, .05) 100%);
+}
+.hero-index .hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 620px);
+  padding-left: 24px;
+  border-left: 4px solid #22c55e;
+}
+.hero-index .hero-copy h1 {
+  max-width: 590px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(2.35rem, 4.4vw, 3.55rem);
+  line-height: 1.12;
+  text-align: left;
+}
+.hero-index .hero-copy p {
+  max-width: 510px;
+  margin: 0 0 28px;
+  color: #f0f5f1;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+}
+.hero-index .hero-copy .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 27px;
+  border-radius: 8px;
+  background: #22a957;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .16);
+  transition: background .2s ease, transform .2s ease;
+}
+.hero-index .hero-copy .btn-primary:hover {
+  background: #198847;
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .hero.hero-index {
+    min-height: 90vh;
+    min-height: min(760px, 90svh);
+    padding: 144px 22px 180px !important;
+    justify-content: center;
+  }
+  .hero.hero-index::before { background-position: 52% center; }
+  .hero.hero-index::after {
+    background: linear-gradient(180deg, rgba(12, 42, 28, .86) 0%, rgba(16, 51, 34, .76) 40%, rgba(18, 51, 35, .28) 76%, rgba(10, 24, 18, .08) 100%);
+  }
+  .hero-index .hero-copy {
+    width: min(100%, 540px);
+    padding-left: 18px;
+    border-left-width: 3px;
+  }
+  .hero-index .hero-copy h1 {
+    max-width: 500px;
+    margin-bottom: 16px;
+    font-size: clamp(2.1rem, 9vw, 2.65rem);
+    line-height: 1.12;
+  }
+  .hero-index .hero-copy p {
+    max-width: 440px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+}
