@@ -438,3 +438,64 @@ header.ser-scrolled .logo { height: 54px !important; }
   .client-proof-logo { min-height: 68px; padding: 9px; }
   .client-proof-logo img { max-height: 44px; }
 }
+
+/* Canales de llamada y WhatsApp en Contacto */
+.contact-channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.contact-channel-option {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px;
+  border: 1px solid #e1e9e3;
+  border-radius: 13px;
+  background: #f7faf8;
+}
+.contact-channel-label {
+  color: #587362;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.contact-channel-number {
+  margin: 7px 0 12px;
+  color: #183b28;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.contact-channel-action {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0 13px;
+  border: 1px solid #178447;
+  border-radius: 8px;
+  color: #178447;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.contact-channel-action.whatsapp {
+  color: #fff;
+  background: #178447;
+}
+.contact-channel-action:hover { background: #edf7f0; }
+.contact-channel-action.whatsapp:hover { background: #126f3a; }
+@media (max-width: 380px) {
+  .contact-channel-grid { grid-template-columns: 1fr; }
+  .contact-channel-option { padding: 12px 14px; }
+  .contact-channel-number { margin: 5px 0 10px; }
+}
