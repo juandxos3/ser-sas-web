@@ -192,3 +192,98 @@ header.ser-scrolled .logo { height: 54px !important; }
     font-size: 1rem !important;
   }
 }
+
+/* Cabeceras interiores: misma línea visual de la portada. */
+.hero.hero-nosotros,
+.hero.hero-servicios,
+.hero.hero-contacto {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 560px;
+  padding: clamp(112px, 15vh, 156px) 8% 180px !important;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  color: #fff;
+}
+.hero.hero-nosotros::before,
+.hero.hero-servicios::before,
+.hero.hero-contacto::before {
+  background-position: center 46%;
+  filter: none;
+  transform: none;
+}
+.hero.hero-nosotros::after,
+.hero.hero-servicios::after,
+.hero.hero-contacto::after {
+  background: linear-gradient(90deg, rgba(12, 42, 28, .88) 0%, rgba(16, 51, 34, .78) 36%, rgba(18, 51, 35, .40) 61%, rgba(10, 24, 18, .05) 100%);
+}
+.hero-nosotros .hero-copy,
+.hero-servicios .hero-copy,
+.hero-contacto .hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 620px);
+  padding-left: 24px;
+  border-left: 4px solid #22c55e;
+}
+.hero-nosotros .hero-copy h1,
+.hero-servicios .hero-copy h1,
+.hero-contacto .hero-copy h1 {
+  max-width: 590px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(2.35rem, 4.4vw, 3.55rem);
+  line-height: 1.12;
+  text-align: left;
+}
+.hero-nosotros .hero-copy p,
+.hero-servicios .hero-copy p,
+.hero-contacto .hero-copy p {
+  max-width: 510px;
+  margin: 0;
+  color: #f0f5f1;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .hero.hero-nosotros,
+  .hero.hero-servicios,
+  .hero.hero-contacto {
+    min-height: 90vh;
+    min-height: min(760px, 90svh);
+    padding: 144px 22px 180px !important;
+    align-items: flex-start !important;
+    justify-content: center;
+  }
+  .hero.hero-nosotros::before { background-position: 54% center; }
+  .hero.hero-servicios::before { background-position: 58% center; }
+  .hero.hero-contacto::before { background-position: 52% center; }
+  .hero.hero-nosotros::after,
+  .hero.hero-servicios::after,
+  .hero.hero-contacto::after {
+    background: linear-gradient(180deg, rgba(12, 42, 28, .86) 0%, rgba(16, 51, 34, .76) 40%, rgba(18, 51, 35, .28) 76%, rgba(10, 24, 18, .08) 100%);
+  }
+  .hero-nosotros .hero-copy,
+  .hero-servicios .hero-copy,
+  .hero-contacto .hero-copy {
+    width: min(100%, 540px);
+    padding-left: 18px;
+    border-left-width: 3px;
+  }
+  .hero-nosotros .hero-copy h1,
+  .hero-servicios .hero-copy h1,
+  .hero-contacto .hero-copy h1 {
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+    padding: 0 !important;
+    font-size: clamp(2.1rem, 9vw, 2.65rem) !important;
+    text-align: left !important;
+  }
+  .hero-nosotros .hero-copy p,
+  .hero-servicios .hero-copy p,
+  .hero-contacto .hero-copy p {
+    margin-bottom: 0 !important;
+    font-size: 1rem !important;
+  }
+}
