@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ser-sas.com/sitemap.xml
