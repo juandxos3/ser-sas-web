@@ -544,7 +544,7 @@ nav ul li:hover .dropdown {
 .hero-servicios::before {
   /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
      Asegúrate de que esté en la carpeta imagenes */
-  background-image: url("imagenes/carro1.jpg");
+  background-image: url("imagenes/carrosersas.png");
   filter: none;
 }
 
