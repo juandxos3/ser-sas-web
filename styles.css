@@ -544,8 +544,8 @@ nav ul li:hover .dropdown {
 .hero-servicios::before {
   /* Cambia 'bañoporfuera.png' por el nombre de la imagen que quieras 
      Asegúrate de que esté en la carpeta imagenes */
-  background-image: url("imagenes/automovil.jfif"); 
-  filter: blur(2px); /* Bajé el difuminado de 4px a 2px para que se vea mejor la foto */
+  background-image: url("imagenes/carro1.jpg");
+  filter: none;
 }
 
 /* Imagen para CONTACTO */
