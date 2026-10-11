@@ -3876,3 +3876,18 @@ section h2 {
   .footer-contact-number { font-size: 13px; }
   .footer-contact-action { font-size: 11px; }
 }
+
+/* Evita que el botón de alquiler se monte sobre el llamado a mantenimiento. */
+#alquiler .service-text-side > a.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 8px 0 16px;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+#alquiler .service-text-side > .service-maintenance-lead {
+  margin-top: 0;
+}
