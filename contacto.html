@@ -10,9 +10,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
-  <title>Contacto y cotizaciones en Puerto Gaitán | SER S.A.S.</title>
+  <title>Cotizaciones para Campo Rubiales | SER S.A.S.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Solicita una cotización para alquiler de baños portátiles, limpieza de pozos sépticos o trampas de grasa. Contáctanos por llamada, WhatsApp o formulario.">
+  <meta name="description" content="Cotiza alquiler o mantenimiento de baños portátiles para proyectos de Campo Rubiales. Solicita atención por llamada, WhatsApp o formulario. Puerto Gaitán también está en nuestra cobertura.">
   <link rel="canonical" href="https://ser-sas.com/contacto.html">
   <link rel="icon" href="imagenes/logosinfondo.webp" type="image/jpeg">
   <link rel="stylesheet" href="styles.css?v=20261010-footer-v1">
@@ -48,6 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="ser-dropdown" id="ser-servicios">
         <a class="ser-all-services" href="servicios.html">Ver todos los servicios</a>
         <a href="servicios.html#alquiler">Alquiler de baños</a>
+        <a href="servicios.html#mantenimiento-banos">Mantenimiento de baños</a>
         <a href="servicios.html#residuos">Residuos</a>
         <a href="servicios.html#pozos">Pozos sépticos</a>
         <a href="servicios.html#transporte">Transporte</a>
@@ -74,8 +75,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="hero hero-contacto">
     <div class="hero-copy">
-      <h1>Contáctanos</h1>
-      <p>Estamos listos para atender tus requerimientos en Campo Rubiales y alrededores</p>
+      <h1>Cotiza para tu proyecto en Campo Rubiales</h1>
+      <p>Cuéntanos qué servicio necesitas y dónde será el proyecto. También atendemos solicitudes en Puerto Gaitán.</p>
     </div>
     
     <div class="leaf-shape">
@@ -91,7 +92,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <div class="contacto-form-box">
         <h2>Envíanos un mensaje</h2>
-        <p style="margin-bottom: 25px; color: #64748b;">Completa el formulario y un asesor se pondrá en contacto contigo a la brevedad.</p>
+        <p style="margin-bottom: 25px; color: #64748b;">Completa los datos básicos y abriremos WhatsApp con la información lista para enviar. El correo es opcional.</p>
         
         <form id="contactForm" class="main-form">
   <div class="form-group">
@@ -100,14 +101,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   
   <div class="form-group">
-    <label>Correo electrónico</label>
-    <input type="email" id="cliente_email" placeholder="nombre@correo.com" required>
+    <label>Correo electrónico (opcional)</label>
+    <input type="email" id="cliente_email" placeholder="nombre@correo.com" autocomplete="email">
+  <div class="form-group">
+    <label for="cliente_telefono">Teléfono de contacto</label>
+    <input type="tel" id="cliente_telefono" placeholder="Ej: 300 123 4567" inputmode="tel" autocomplete="tel" pattern="[0-9+() -]{7,20}" required>
   </div>
 
   <div class="form-group">
-    <label>Servicio de interés</label>
-    <select id="cliente_servicio">
-      <option>Alquiler de baños portátiles</option>
+    <label for="cliente_zona">¿Dónde está el proyecto?</label>
+    <select id="cliente_zona" required>
+      <option value="" selected disabled>Selecciona una zona</option>
+      <option>Campo Rubiales</option>
+      <option>Puerto Gaitán</option>
+      <option>Otra zona del Meta</option>
+    </select>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label for="cliente_servicio">Servicio de interés</label>
+    <select id="cliente_servicio" required>
+      <option value="" selected disabled>Selecciona un servicio</option>
+      <option>Alquiler de baños portátiles con mantenimiento</option>
+      <option>Mantenimiento de baños portátiles que ya tiene mi empresa</option>
       <option>Limpieza de pozos sépticos</option>
       <option>Limpieza de trampas de grasa</option>
       <option>Manejo de residuos líquidos</option>
@@ -163,7 +180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     width="100%" height="350" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy">
   </iframe>
   <p style="text-align: center; margin-top: 10px; color: #64748b; font-size: 0.9rem;">
-    📍 Cobertura garantizada en Campo Rubiales y zonas de operación petrolera.
+    📍 Foco principal de atención: Campo Rubiales. También atendemos solicitudes en Puerto Gaitán.
   </p>
 </div>
 
@@ -234,25 +251,30 @@ function enviarAWhatsApp() {
   // 1. Obtenemos los valores de los campos
   const nombre = document.getElementById('cliente_nombre').value;
   const email = document.getElementById('cliente_email').value;
+  const telefono = document.getElementById('cliente_telefono').value;
+  const zona = document.getElementById('cliente_zona').value;
   const servicio = document.getElementById('cliente_servicio').value;
   const mensaje = document.getElementById('cliente_mensaje').value;
+  const form = document.getElementById('contactForm');
   const telefonoEmpresa = "573204247437"; // Tu número
 
-  // 2. Validamos que el nombre no esté vacío
-  if(nombre === "") {
-    alert("Por favor, ingresa tu nombre antes de enviar.");
+  // Validamos los campos requeridos antes de abrir WhatsApp.
+  if (!form.reportValidity()) {
+
     return;
   }
 
   // 3. Creamos el mensaje con formato profesional
-  const texto = `*NUEVO CONTACTO WEB - SER SAS*%0A%0A` +
-                `*Nombre:* ${nombre}%0A` +
-                `*Email:* ${email}%0A` +
-                `*Servicio:* ${servicio}%0A` +
-                `*Mensaje:* ${mensaje}`;
+  const texto = `*NUEVO CONTACTO WEB - SER SAS*\n\n` +
+                `*Nombre:* ${nombre}\n` +
+                `*Email:* ${email || 'No suministrado'}\n` +
+                `*Teléfono:* ${telefono}\n` +
+                `*Ubicación del proyecto:* ${zona}\n` +
+                `*Servicio:* ${servicio}\n` +
+                `*Mensaje:* ${mensaje || 'Sin mensaje adicional'}`;
 
   // 4. Creamos la URL de WhatsApp
-  const url = `https://wa.me/${telefonoEmpresa}?text=${texto}`;
+  const url = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(texto)}`;
 
   // 5. Abrimos la URL en una nueva pestaña
   window.open(url, '_blank');
