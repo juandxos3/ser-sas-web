@@ -368,7 +368,7 @@ header.ser-scrolled .logo { height: 54px !important; }
   display: flex;
   align-items: center;
   width: max-content;
-  animation: clients-marquee 42s linear infinite;
+  animation: clients-marquee 67s linear infinite;
   will-change: transform;
 }
 .clients-slider-section .logos-group {
@@ -456,7 +456,7 @@ header.ser-scrolled .logo { height: 54px !important; }
 }
 .client-proof-logos {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   width: min(100%, 900px);
   margin: 0 auto;
@@ -481,7 +481,7 @@ header.ser-scrolled .logo { height: 54px !important; }
 @media (max-width: 768px) {
   .client-proof { padding: 30px 0 34px; }
   .client-proof h2 { margin-bottom: 16px; }
-  .client-proof-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+  .client-proof-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .client-proof-logo { min-height: 68px; padding: 9px; }
   .client-proof-logo img { max-height: 44px; }
 }
@@ -545,4 +545,28 @@ header.ser-scrolled .logo { height: 54px !important; }
   .contact-channel-grid { grid-template-columns: 1fr; }
   .contact-channel-option { padding: 12px 14px; }
   .contact-channel-number { margin: 5px 0 10px; }
+}
+
+/* OMIA: encuadre del PNG transparente original, sin alterar el logo. */
+.client-logo-omia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 174px;
+  height: 50px;
+  overflow: hidden;
+}
+.clients-slider-section .logo-item img,
+.client-proof-logo img { height: auto; }
+.clients-slider-section .logo-item .client-logo-omia img,
+.client-proof-logo .client-logo-omia img {
+  flex-shrink: 0;
+  width: 143%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+}
+@media (max-width: 768px) {
+  .client-proof-logo .client-logo-omia { height: 44px; }
 }
