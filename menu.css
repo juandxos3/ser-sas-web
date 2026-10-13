@@ -368,7 +368,7 @@ header.ser-scrolled .logo { height: 54px !important; }
   display: flex;
   align-items: center;
   width: max-content;
-  animation: clients-marquee 42s linear infinite;
+  animation: clients-marquee 67s linear infinite;
   will-change: transform;
 }
 .clients-slider-section .logos-group {
@@ -456,7 +456,7 @@ header.ser-scrolled .logo { height: 54px !important; }
 }
 .client-proof-logos {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   width: min(100%, 900px);
   margin: 0 auto;
@@ -481,7 +481,7 @@ header.ser-scrolled .logo { height: 54px !important; }
 @media (max-width: 768px) {
   .client-proof { padding: 30px 0 34px; }
   .client-proof h2 { margin-bottom: 16px; }
-  .client-proof-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+  .client-proof-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .client-proof-logo { min-height: 68px; padding: 9px; }
   .client-proof-logo img { max-height: 44px; }
 }
@@ -545,4 +545,34 @@ header.ser-scrolled .logo { height: 54px !important; }
   .contact-channel-grid { grid-template-columns: 1fr; }
   .contact-channel-option { padding: 12px 14px; }
   .contact-channel-number { margin: 5px 0 10px; }
+}
+
+/* Encuadre visual de los ocho logos: se conservan los archivos originales. */
+.clients-slider-section .logo-item { min-height: 124px; }
+.client-proof-logo { box-sizing: border-box; min-height: 112px; padding: 14px; }
+.client-logo-frame {
+  position: relative;
+  width: min(100%, calc(var(--client-logo-height, 80px) * var(--logo-ratio)));
+  max-width: 174px;
+  aspect-ratio: var(--logo-ratio);
+  overflow: hidden;
+}
+.clients-slider-section .logo-item .client-logo-frame img,
+.client-proof-logo .client-logo-frame img {
+  position: absolute;
+  display: block;
+  left: var(--logo-left);
+  top: var(--logo-top);
+  width: var(--logo-width);
+  height: var(--logo-height);
+  max-width: none;
+  max-height: none;
+  object-fit: fill;
+  opacity: 1;
+  filter: none;
+}
+@media (max-width: 768px) {
+  .client-logo-frame { --client-logo-height: 68px; }
+  .client-proof-logo { min-height: 100px; padding: 12px; }
+  .clients-slider-section .logo-item { min-height: 112px; }
 }
