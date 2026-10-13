@@ -581,3 +581,8 @@ header.ser-scrolled .logo { height: 54px !important; }
 .cta-banner.cta-home .leaf-shape .fill-bg {
   fill: #f6faf7 !important;
 }
+
+/* La curva de la portada continúa sobre el fondo de Nuestros servicios. */
+.hero.hero-index .leaf-shape .fill-bg {
+  fill: #f6f9fc !important;
+}
