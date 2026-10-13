@@ -576,3 +576,8 @@ header.ser-scrolled .logo { height: 54px !important; }
   .client-proof-logo { min-height: 100px; padding: 12px; }
   .clients-slider-section .logo-item { min-height: 112px; }
 }
+
+/* La curva de Inicio continúa sobre el fondo del carrusel de clientes. */
+.cta-banner.cta-home .leaf-shape .fill-bg {
+  fill: #f6faf7 !important;
+}
