@@ -586,3 +586,18 @@ header.ser-scrolled .logo { height: 54px !important; }
 .hero.hero-index .leaf-shape .fill-bg {
   fill: #f6f9fc !important;
 }
+
+/* Las curvas interiores continúan sobre el fondo de la sección siguiente. */
+.hero.hero-servicios .leaf-shape .fill-bg,
+.hero.hero-nosotros .leaf-shape .fill-bg {
+  fill: #f6f9fc !important;
+}
+.hero.hero-contacto .leaf-shape .fill-bg {
+  fill: #f8fafc !important;
+}
+.hero-servicios ~ .cta-banner .leaf-shape .fill-bg {
+  fill: #f6faf7 !important;
+}
+.hero-nosotros ~ .cta-banner .leaf-shape .fill-bg {
+  fill: #0f172a !important;
+}
