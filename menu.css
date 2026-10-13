@@ -547,26 +547,32 @@ header.ser-scrolled .logo { height: 54px !important; }
   .contact-channel-number { margin: 5px 0 10px; }
 }
 
-/* OMIA: encuadre del PNG transparente original, sin alterar el logo. */
-.client-logo-omia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+/* Encuadre visual de los ocho logos: se conservan los archivos originales. */
+.clients-slider-section .logo-item { min-height: 124px; }
+.client-proof-logo { box-sizing: border-box; min-height: 112px; padding: 14px; }
+.client-logo-frame {
+  position: relative;
+  width: min(100%, calc(var(--client-logo-height, 80px) * var(--logo-ratio)));
   max-width: 174px;
-  height: 50px;
+  aspect-ratio: var(--logo-ratio);
   overflow: hidden;
 }
-.clients-slider-section .logo-item img,
-.client-proof-logo img { height: auto; }
-.clients-slider-section .logo-item .client-logo-omia img,
-.client-proof-logo .client-logo-omia img {
-  flex-shrink: 0;
-  width: 143%;
+.clients-slider-section .logo-item .client-logo-frame img,
+.client-proof-logo .client-logo-frame img {
+  position: absolute;
+  display: block;
+  left: var(--logo-left);
+  top: var(--logo-top);
+  width: var(--logo-width);
+  height: var(--logo-height);
   max-width: none;
-  height: auto;
   max-height: none;
+  object-fit: fill;
+  opacity: 1;
+  filter: none;
 }
 @media (max-width: 768px) {
-  .client-proof-logo .client-logo-omia { height: 44px; }
+  .client-logo-frame { --client-logo-height: 68px; }
+  .client-proof-logo { min-height: 100px; padding: 12px; }
+  .clients-slider-section .logo-item { min-height: 112px; }
 }
