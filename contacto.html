@@ -96,13 +96,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <form id="contactForm" class="main-form">
   <div class="form-group">
-    <label>Nombre completo</label>
-    <input type="text" id="cliente_nombre" placeholder="Ej: Juan Pérez" required>
+    <label for="cliente_nombre">Nombre completo</label>
+    <input type="text" id="cliente_nombre" autocomplete="name" placeholder="Ej: Juan Pérez" required>
   </div>
   
   <div class="form-group">
-    <label>Correo electrónico (opcional)</label>
+    <label for="cliente_email">Correo electrónico (opcional)</label>
     <input type="email" id="cliente_email" placeholder="nombre@correo.com" autocomplete="email">
+  </div>
   <div class="form-group">
     <label for="cliente_telefono">Teléfono de contacto</label>
     <input type="tel" id="cliente_telefono" placeholder="Ej: 300 123 4567" inputmode="tel" autocomplete="tel" pattern="[0-9+() -]{7,20}" required>
@@ -116,7 +117,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option>Puerto Gaitán</option>
       <option>Otra zona del Meta</option>
     </select>
-  </div>
   </div>
 
   <div class="form-group">
@@ -134,11 +134,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="form-group">
-    <label>Mensaje o Requerimiento</label>
+    <label for="cliente_mensaje">Mensaje o Requerimiento</label>
     <textarea id="cliente_mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
   </div>
 
-  <button type="button" onclick="enviarAWhatsApp()" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">
+  <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">
     Enviar por WhatsApp
   </button>
 </form>
@@ -250,6 +250,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 <script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  enviarAWhatsApp();
+});
+
 function enviarAWhatsApp() {
   // 1. Obtenemos los valores de los campos
   const nombre = document.getElementById('cliente_nombre').value;
@@ -280,23 +285,10 @@ function enviarAWhatsApp() {
   const url = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(texto)}`;
 
   // 5. Abrimos la URL en una nueva pestaña
-  window.open(url, '_blank');
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 </script>
   <script src="menu.js?v=20261006-header" defer></script>
-  <script>
-document.getElementById('miFormulario').addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita que la página se recargue
-  
-  // Aquí simulamos el envío
-  this.innerHTML = `
-    <div style="text-align: center; padding: 40px;">
-      <span style="font-size: 50px;">✅</span>
-      <h3 style="color: #22c55e;">¡Mensaje Enviado!</h3>
-      <p>Gracias por contactar a SER S.A.S. Nos comunicaremos contigo muy pronto.</p>
-    </div>
-  `;
-});
-</script>
+
 </body>
 </html>
