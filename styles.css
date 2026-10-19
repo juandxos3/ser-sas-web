@@ -3897,3 +3897,6 @@ section h2 {
 .ser-map-load > span:last-child {background:#168447; color:#fff; padding:12px 22px; border-radius:999px; font-weight:600;}
 .ser-map-load:focus-visible {outline:3px solid #168447; outline-offset:4px;}
 .ser-map-frame[hidden] {display:none;}
+
+/* Mantener la proporción al reservar dimensiones intrínsecas de las fotos. */
+.service-image-side > img { height: auto; }
