@@ -8,17 +8,19 @@
   <meta name="description" content="Alquiler y mantenimiento de baños portátiles en Campo Rubiales, incluso para unidades de otras empresas. También atendemos Puerto Gaitán. Cotiza con SER S.A.S.">
   <link rel="canonical" href="https://ser-sas.com/servicios.html">
 
-  <link rel="icon" href="imagenes/logosinfondo.webp" type="image/jpeg">
+  <link rel="icon" href="imagenes/logosinfondo.webp" type="image/webp">
   <link rel="stylesheet" href="fonts.css?v=20261019-performance">
   <link rel="preload" as="font" href="fonts/font-6.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="fonts/font-11.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="imagenes/servicios-campo-ser.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css?v=20261019-performance-ratio">
   <link rel="stylesheet" href="menu.css?v=20261013-all-seams">
+  <link rel="stylesheet" href="services-page.css?v=20261019-services">
   <script src="ser-metrics.js?v=20261019-ga4" defer></script>
+  <script src="services-page.js?v=20261019-services" defer></script>
 </head>
 
-<body>
+<body class="services-page">
 
 <!-- WHATSAPP -->
 <a
@@ -77,6 +79,7 @@
   </div>
 </header>
 
+<main id="contenido-principal">
 <!-- HERO -->
 <section class="hero hero-servicios">
     <div class="hero-copy">
@@ -102,32 +105,33 @@
   <div class="service-container">
     
     <div class="service-image-side">
-      <div class="gallery-container revelar-izq">
-        <div class="gallery-slider">
+      <div class="gallery-container revelar-izq" role="region" aria-label="Fotos de baños portátiles de SER S.A.S.">
+        <div class="gallery-slider" id="service-gallery">
           <div class="slide">
-            <img src="imagenes/optimized/asset-15.webp" alt="Alquiler de baños portátiles" width="412" height="549">
+            <img src="imagenes/optimized/asset-15.webp" alt="Vista frontal de un baño portátil azul de SER S.A.S." width="412" height="549">
             <span class="slide-caption">Línea Premium Industrial</span>
           </div>
           <div class="slide">
-            <img src="imagenes/optimized/asset-16.webp" alt="Interior baño" loading="lazy" decoding="async" fetchpriority="low" width="720" height="1280">
-            <span class="slide-caption">Mantenimiento Garantizado</span>
+            <img src="imagenes/optimized/asset-16.webp" alt="Dos unidades de baños portátiles azules" loading="lazy" decoding="async" fetchpriority="low" width="720" height="1280">
+            <span class="slide-caption">Unidades sanitarias portátiles</span>
           </div>
           <div class="slide">
-            <img src="imagenes/optimized/asset-0.webp" alt="Entrega de baños" loading="lazy" decoding="async" fetchpriority="low" width="1440" height="1920">
+            <img src="imagenes/optimized/asset-0.webp" alt="Vista lateral de un baño portátil azul" loading="lazy" decoding="async" fetchpriority="low" width="1440" height="1920">
             <span class="slide-caption">Vista Lateral</span>
           </div>
           <div class="slide">
-            <img src="imagenes/optimized/asset-1.webp" alt="Entrega de baños" loading="lazy" decoding="async" fetchpriority="low" width="1440" height="1920">
+            <img src="imagenes/optimized/asset-1.webp" alt="Interior de un baño portátil con sanitario y lavamanos" loading="lazy" decoding="async" fetchpriority="low" width="1440" height="1920">
             <span class="slide-caption">Vista Interior</span>
           </div>
           <div class="slide">
-            <img src="imagenes/baño por dentro.jpeg" alt="Entrega de baños" loading="lazy" decoding="async" fetchpriority="low">
+            <img src="imagenes/baño por dentro.jpeg" alt="Vista superior del interior de un baño portátil" loading="lazy" decoding="async" fetchpriority="low">
             <span class="slide-caption">Vista Interior</span>
           </div>
         </div>
 
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <button class="prev" type="button" data-gallery-step="-1" aria-label="Ver foto anterior" aria-controls="service-gallery" hidden>&#10094;</button>
+        <button class="next" type="button" data-gallery-step="1" aria-label="Ver foto siguiente" aria-controls="service-gallery" hidden>&#10095;</button>
+        <span class="ser-visually-hidden" id="gallery-status" aria-live="polite" aria-atomic="true">Foto 1 de 5</span>
       </div>
 
       <div class="specs-mini">
@@ -142,16 +146,17 @@
       <p>Alquiler de baños portátiles para proyectos industriales y obras en Campo Rubiales, con mantenimiento según el servicio contratado. También atendemos solicitudes en Puerto Gaitán. Consulta la <a class="service-inline-link" href="#mantenimiento-banos">opción de mantenimiento para unidades de otras empresas</a> y el <a class="service-inline-link" href="#transporte">transporte especializado</a>.</p>
       
       <ul class="check-list">
-        <li>Suministro de papel higiénico y jabon de manos.</li>
+        <li>Suministro de papel higiénico y jabón de manos.</li>
         <li>Desinfección profunda programada.</li>
         <li>Instalación Oportuna.</li>
         <li>Cumplimiento de normas ambientales.</li>
       </ul>
 
       <a href="https://wa.me/573204247437?text=Hola%2C%20quiero%20cotizar%20el%20alquiler%20de%20ba%C3%B1os%20port%C3%A1tiles%20para%20un%20proyecto%20en%20Campo%20Rubiales." class="btn-primary" target="_blank" rel="noopener noreferrer">Cotizar alquiler por WhatsApp</a>
+      <p class="service-quote-hint">Para cotizar el alquiler, indícanos la cantidad de baños, la ubicación del proyecto y las fechas o duración del servicio. También puedes <a class="service-inline-link" href="contacto.html?servicio=alquiler#contactForm">cotizar el alquiler por formulario</a>.</p>
       <h3 id="mantenimiento-banos">Mantenimiento de baños portátiles de tu empresa</h3>
       <p class="service-maintenance-lead">Si tu empresa ya tiene baños portátiles, puedes contratar su mantenimiento con SER S.A.S. en Campo Rubiales. No necesitas alquilar nuestras unidades para solicitar este servicio. Indícanos la cantidad de baños, la ubicación del proyecto y la atención que requieren para acordar el alcance y la frecuencia del mantenimiento.</p>
-      <p><a class="service-inline-link" href="https://wa.me/573204247437?text=Hola%2C%20quiero%20cotizar%20el%20mantenimiento%20de%20ba%C3%B1os%20port%C3%A1tiles%20de%20mi%20empresa%20en%20Campo%20Rubiales." target="_blank" rel="noopener noreferrer">Cotizar mantenimiento de mis baños</a> o <a class="service-inline-link" href="contacto.html#contactForm">enviar los datos por el formulario</a>.</p>
+      <p><a class="service-inline-link" href="https://wa.me/573204247437?text=Hola%2C%20quiero%20cotizar%20el%20mantenimiento%20de%20ba%C3%B1os%20port%C3%A1tiles%20de%20mi%20empresa%20en%20Campo%20Rubiales." target="_blank" rel="noopener noreferrer">Cotizar mantenimiento de mis baños</a> o <a class="service-inline-link" href="contacto.html?servicio=mantenimiento#contactForm">enviar los datos por el formulario</a>.</p>
     </div>
   </div>
 </section>
@@ -164,8 +169,8 @@
     </div>
     
     <div class="service-text-side revelar">
-      <h2>Manejo de Residuos</h2>
-      <p>Gestión integral de residuos líquidos con certificación de disposición final. Nos encargamos de todo el proceso para que su empresa cumpla con la normativa. Conoce también el <a class="service-inline-link" href="#transporte">transporte especializado</a>.</p>
+      <h2>Manejo de residuos líquidos</h2>
+      <p>Gestionamos la recolección, el transporte y la disposición final de residuos líquidos, incluidas las aguas residuales domésticas, con certificación de disposición final. Coordinamos el alcance del servicio según el tipo de residuo y las condiciones del proyecto. Conoce también el <a class="service-inline-link" href="#transporte">transporte especializado</a>.</p>
       
       <div class="feature-pills">
         <span>Residuos líquidos</span>
@@ -173,6 +178,7 @@
       </div>
 
       <a href="https://wa.me/573204247437?text=Hola%2C%20quiero%20cotizar%20el%20manejo%20de%20residuos%20l%C3%ADquidos%20en%20Campo%20Rubiales%20o%20Puerto%20Gait%C3%A1n." class="btn-secondary" target="_blank" rel="noopener noreferrer">Cotizar manejo de residuos</a>
+      <p class="service-quote-hint">Indícanos el tipo de residuo líquido, la ubicación y el volumen aproximado, si lo conoces. Señala si necesitas una atención puntual o periódica. <a class="service-inline-link" href="contacto.html?servicio=residuos#contactForm">Enviar los datos por formulario</a>.</p>
     </div>
   </div>
 </section>
@@ -191,7 +197,7 @@
     
     <div class="service-text-side">
       <h2>Limpieza de Pozos Sépticos</h2>
-      <p>Realizamos el mantenimiento preventivo y correctivo de sistemas de tratamiento de aguas residuales. Contamos con equipos de succión de alta potencia para garantizar una limpieza total. Consulta además la <a class="service-inline-link" href="#trampas">limpieza de trampas de grasa</a>.</p>
+      <p>Realizamos el mantenimiento preventivo y correctivo de sistemas de tratamiento de aguas residuales. El alcance de la succión y la limpieza se coordina según las características del sistema y las condiciones de acceso. Consulta además la <a class="service-inline-link" href="#trampas">limpieza de trampas de grasa</a>.</p>
       
       <ul class="check-list">
         <li>Succión y transporte de lodos.</li>
@@ -201,6 +207,7 @@
       </ul>
 
       <a href="https://wa.me/573204247437?text=Hola%2C%20quiero%20cotizar%20la%20limpieza%20de%20un%20pozo%20s%C3%A9ptico%20en%20Campo%20Rubiales%20o%20Puerto%20Gait%C3%A1n." class="btn-primary" target="_blank" rel="noopener noreferrer">Cotizar limpieza por WhatsApp</a>
+      <p class="service-quote-hint">Comparte la ubicación del pozo séptico, la capacidad aproximada si la conoces y las condiciones de acceso para el equipo de succión. <a class="service-inline-link" href="contacto.html?servicio=pozos#contactForm">Enviar los datos por formulario</a>.</p>
     </div>
   </div>
 </section>
@@ -213,7 +220,7 @@
 
     <div class="service-text-side revelar">
       <h2>Transporte Especializado</h2>
-      <p>Contamos con una flota logística preparada para el traslado seguro de unidades sanitarias y residuos líquidos, asegurando la integridad de los equipos y el cumplimiento de los tiempos pactados.</p>
+      <p>Coordinamos el transporte de unidades sanitarias y residuos líquidos para proyectos con foco en Campo Rubiales y atención de solicitudes en Puerto Gaitán. Revisamos el origen, el destino, el tipo de carga y las condiciones de acceso para definir el alcance y la programación del traslado.</p>
       
       <div class="feature-pills">
         <span>Cobertura Regional</span>
@@ -222,6 +229,7 @@
       </div>
 
       <a href="https://wa.me/573204247437?text=Hola%2C%20quiero%20consultar%20y%20cotizar%20el%20transporte%20especializado%20en%20Campo%20Rubiales%20o%20Puerto%20Gait%C3%A1n." class="btn-secondary" target="_blank" rel="noopener noreferrer">Consultar transporte y cotizar</a>
+      <p class="service-quote-hint">Comparte el origen, el destino, el tipo de carga y la fecha prevista del traslado. <a class="service-inline-link" href="contacto.html?servicio=transporte#contactForm">Enviar los datos por formulario</a>.</p>
     </div>
   </div>
 </section>
@@ -239,7 +247,7 @@
     <div class="service-text-side revelar">
       <span class="service-tag">Sectores: Restaurantes / Industria</span>
       <h2>Limpieza de Trampas de Grasa</h2>
-      <p>Evite taponamientos, malos olores y sanciones ambientales. Realizamos la extracción, limpieza técnica y disposición final de grasas de forma certificada.</p>
+      <p>Realizamos la extracción de grasas acumuladas, la limpieza técnica y la disposición final certificada de los residuos. Este mantenimiento ayuda a prevenir obstrucciones y malos olores; su alcance se define según las características de la trampa de grasa.</p>
       
       <ul class="check-list">
         <li>Succión mecánica de grasas acumuladas.</li>
@@ -248,6 +256,7 @@
       </ul>
 
       <a href="https://wa.me/573204247437?text=Hola%2C%20necesito%20cotizar%20la%20limpieza%20de%20una%20trampa%20de%20grasa%20en%20Campo%20Rubiales%20o%20Puerto%20Gait%C3%A1n." class="btn-primary" target="_blank" rel="noopener noreferrer">Cotizar limpieza por WhatsApp</a>
+      <p class="service-quote-hint">Indícanos la ubicación, el tamaño aproximado de la trampa de grasa y la fecha en que necesitas el servicio. <a class="service-inline-link" href="contacto.html?servicio=trampas#contactForm">Enviar los datos por formulario</a>.</p>
     </div>
   </div>
 </section>
@@ -292,8 +301,7 @@
     </div>
 </section>
 
-</section>
-<button id="scrollToTop" class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<button id="scrollToTop" class="btn-top" aria-label="Volver al inicio de la página" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
   ↑
 </button>
 
@@ -312,6 +320,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="main-footer">
   <div class="footer-container">
@@ -358,27 +368,5 @@
 </footer>
 <script src="menu.js?v=20261019-performance" defer></script>
 
-<script>
-  let currentSlide = 0;
-  function moveSlide(step) {
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-    const offset = -currentSlide * 100;
-    document.querySelector('.gallery-slider').style.transform = `translateX(${offset}%)`;
-  }
-</script>
-<script>
-  window.addEventListener('scroll', function() {
-    var elementos = document.querySelectorAll('.revelar, .revelar-izq');
-    for (var i = 0; i < elementos.length; i++) {
-      var alturaVentana = window.innerHeight;
-      var distanciaTop = elementos[i].getBoundingClientRect().top;
-      if (distanciaTop < alturaVentana - 150) {
-        elementos[i].classList.add('activo');
-      }
-    }
-  });
-</script>
 </body>
 </html>
