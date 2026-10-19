@@ -87,3 +87,16 @@
   window.addEventListener('pageshow', () => setOpen(false, false));
   setOpen(false, false);
 })();
+
+// Cargar Google Maps únicamente cuando se solicita.
+(() => {
+  const button = document.querySelector('.ser-map-load');
+  const frame = document.querySelector('.ser-map-frame');
+  if (!button || !frame) return;
+  button.addEventListener('click', () => {
+    frame.src = frame.dataset.mapSrc;
+    frame.hidden = false;
+    button.hidden = true;
+    button.style.display = 'none';
+  }, {once: true});
+})();

@@ -530,7 +530,7 @@ nav ul li:hover .dropdown {
 }
 /* Imagen para INDEX */
 .hero-index::before {
-  background-image: url("imagenes/fondo_index.png");
+  background-image: url("imagenes/optimized/asset-4.webp");
 }
 
 /* Imagen para NOSOTROS */
@@ -1938,7 +1938,7 @@ section h2 {
 }
 /* Imagen para INDEX */
 .hero-index::before {
-  background-image: url("imagenes/fondo_index.png");
+  background-image: url("imagenes/optimized/asset-4.webp");
 }
 
 /* Imagen para NOSOTROS */
@@ -3889,3 +3889,11 @@ section h2 {
 #alquiler .service-text-side > .service-maintenance-lead {
   margin-top: 0;
 }
+
+/* El mapa se descarga cuando el visitante lo solicita. */
+.ser-map-load { width:100%; min-height:350px; border:1px solid #dbe7ef; border-radius:20px; background:linear-gradient(135deg,#edf7f2,#edf4fa); color:#1e415c; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; cursor:pointer; font:inherit; padding:24px; }
+.ser-map-load > span:first-child {font-size:42px;}
+.ser-map-load strong {font-size:20px;}
+.ser-map-load > span:last-child {background:#168447; color:#fff; padding:12px 22px; border-radius:999px; font-weight:600;}
+.ser-map-load:focus-visible {outline:3px solid #168447; outline-offset:4px;}
+.ser-map-frame[hidden] {display:none;}
