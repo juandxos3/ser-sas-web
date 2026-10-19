@@ -290,8 +290,9 @@ function enviarAWhatsApp() {
   const url = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(texto)}`;
 
   // 5. Abrimos la URL en una nueva pestaña
-  window.open(url, '_blank', 'noopener,noreferrer');
+  // Registramos la intención antes de que el navegador cambie a WhatsApp.
   document.dispatchEvent(new Event('ser:quote-whatsapp-open'));
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 </script>
   <script src="menu.js?v=20261006-header" defer></script>
