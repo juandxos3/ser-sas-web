@@ -21,6 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preload" as="image" href="imagenes/fondocontacto.jpeg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css?v=20261019-loading">
   <link rel="stylesheet" href="menu.css?v=20261013-all-seams">
+  <script src="ser-metrics.js?v=20261019-ga4" defer></script>
 </head>
 
 <body>
@@ -290,6 +291,7 @@ function enviarAWhatsApp() {
 
   // 5. Abrimos la URL en una nueva pestaña
   window.open(url, '_blank', 'noopener,noreferrer');
+  document.dispatchEvent(new Event('ser:quote-whatsapp-open'));
 }
 </script>
   <script src="menu.js?v=20261006-header" defer></script>
