@@ -1,0 +1,29 @@
+/* Acceso directo al mantenimiento conservando la composición de la portada. */
+.home-page .hero-index .hero-maintenance-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 18px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.home-page .hero-index .hero-maintenance-link:focus-visible,
+.home-page .clients-slider-section .slider-wrapper:focus-visible {
+  outline: 3px solid #22c55e;
+  outline-offset: 5px;
+}
+/* Sin animación, los ocho logos siguen disponibles con desplazamiento manual. */
+@media (prefers-reduced-motion: reduce) {
+  .home-page .clients-slider-section .slider-wrapper {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .home-page .clients-slider-section .logos-group[aria-hidden="true"] {
+    display: none;
+  }
+}
