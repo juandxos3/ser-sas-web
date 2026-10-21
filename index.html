@@ -14,21 +14,31 @@
 
  
 
-  <link rel="icon" href="imagenes/logosinfondo.webp" type="image/jpeg">
+  <link rel="icon" href="imagenes/logosinfondo.webp" type="image/webp">
   <link rel="stylesheet" href="fonts.css?v=20261019-performance">
   <link rel="preload" as="font" href="fonts/font-6.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="fonts/font-11.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="imagenes/optimized/asset-4.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css?v=20261019-performance-ratio">
   <link rel="stylesheet" href="menu.css?v=20261013-hero-seam">
+  <link rel="stylesheet" href="home-page.css?v=20261021-home">
   <script src="ser-metrics.js?v=20261019-ga4" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SER S.A.S.",
+  "alternateName": "Servicios Ecológicos Rubiales S.A.S.",
+  "url": "https://ser-sas.com/"
+}
+  </script>
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- WHATSAPP FLOTANTE -->
   <a
-    href="https://wa.me/573204247437?text=Hola%20quiero%20información%20sobre%20el%20alquiler%20de%20baños%20portátiles"
+    href="https://wa.me/573204247437?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20alquiler%20o%20mantenimiento%20de%20ba%C3%B1os%20port%C3%A1tiles%20para%20un%20proyecto%20en%20Campo%20Rubiales%20o%20Puerto%20Gait%C3%A1n."
     class="whatsapp-float"
     target="_blank"
     aria-label="WhatsApp"
@@ -84,12 +94,14 @@
 </header>
 
 
+  <main id="contenido-principal">
   <!-- HERO -->
   <section class="hero hero-index">
     <div class="hero-copy">
       <h1>Baños portátiles en Campo Rubiales</h1>
       <p>Alquiler de baños portátiles con mantenimiento para proyectos en Campo Rubiales. También atendemos solicitudes en Puerto Gaitán.</p>
-      <a href="contacto.html#contactForm" class="btn-primary">Cotizar para Campo Rubiales</a>
+      <a href="contacto.html?servicio=alquiler#contactForm" class="btn-primary">Cotizar alquiler</a>
+      <a href="contacto.html?servicio=mantenimiento#contactForm" class="hero-maintenance-link">¿Ya tienes baños? Cotiza su mantenimiento</a>
     </div>
     <div class="leaf-shape">
         <svg viewBox="0 -10 1200 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +246,7 @@
 <section class="clients-slider-section" aria-labelledby="clients-title">
   <div class="container">
     <h2 class="section-title" id="clients-title">Empresas que confían en nosotros</h2>
-    <div class="slider-wrapper" role="region" aria-label="Logotipos de empresas clientes">
+    <div class="slider-wrapper" role="region" aria-label="Logotipos de empresas clientes" tabindex="0">
       <div class="logos-track">
 <div class="logos-group">
   <div class="logo-item"><div class="client-logo-frame" style="--logo-ratio:1.448087;--logo-width:150.9434%;--logo-height:163.9344%;--logo-left:-25.2830%;--logo-top:-32.7869%"><img src="imagenes/optimized/asset-13.webp" alt="Guacamayas" width="400" height="300" loading="lazy" decoding="async"></div></div>
@@ -260,9 +272,10 @@
     </div>
   </div>
 </section>
-<button id="scrollToTop" class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<button id="scrollToTop" class="btn-top" aria-label="Volver al inicio de la página" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
   ↑
 </button>
+  </main>
   <!-- FOOTER -->
   <footer class="main-footer">
   <div class="footer-container">
