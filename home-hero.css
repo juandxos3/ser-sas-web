@@ -17,3 +17,43 @@
 .hero.hero-index .leaf-shape{height:auto;bottom:-2px}
 .hero.hero-index .leaf-shape path[stroke]{animation:none;stroke-dashoffset:0}
 .home-page .hero-index .leaf-services-link:focus-visible{outline:3px solid #b5efca;outline-offset:5px}
+
+/* Dar visibilidad al mantenimiento de baños propios. */
+.home-page .hero-maintenance-block {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff35;
+  max-width: 440px;
+}
+.home-page .hero-maintenance-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.home-page .hero-index .hero-maintenance-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+  min-height: 48px;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px 20px;
+  border: 1px solid #b5efca;
+  border-radius: 9px;
+  background: #ffffff0d;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.home-page .hero-index .hero-maintenance-link:hover {
+  background: #ffffff20;
+}
